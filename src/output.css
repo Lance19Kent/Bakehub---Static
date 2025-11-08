@@ -7,6 +7,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-300: oklch(87.9% 0.169 91.605);
+    --color-amber-400: oklch(82.8% 0.189 84.429);
     --spacing: 0.25rem;
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
@@ -173,8 +175,20 @@
   .h-\[100px\] {
     height: 100px;
   }
+  .h-\[220px\] {
+    height: 220px;
+  }
+  .h-fit {
+    height: fit-content;
+  }
+  .h-full {
+    height: 100%;
+  }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-\[1\] {
+    width: 1;
   }
   .w-\[1px\] {
     width: 1px;
@@ -203,8 +217,14 @@
   .w-\[80px\] {
     width: 80px;
   }
+  .w-fit {
+    width: fit-content;
+  }
   .w-full {
     width: 100%;
+  }
+  .flex-1 {
+    flex: 1;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -215,11 +235,20 @@
   .resize {
     resize: both;
   }
+  .flex-col {
+    flex-direction: column;
+  }
   .items-center {
     align-items: center;
   }
+  .items-end {
+    align-items: flex-end;
+  }
   .justify-between {
     justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
   }
   .justify-end {
     justify-content: flex-end;
@@ -252,8 +281,17 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .bg-\[var\(--\)\] {
+    background-color: var(--);
+  }
   .bg-\[var\(--bg-color\)\] {
     background-color: var(--bg-color);
+  }
+  .bg-amber-300 {
+    background-color: var(--color-amber-300);
+  }
+  .bg-amber-400 {
+    background-color: var(--color-amber-400);
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -264,14 +302,41 @@
   .p-10 {
     padding: calc(var(--spacing) * 10);
   }
+  .px-\[0px\] {
+    padding-inline: 0px;
+  }
   .px-\[20px\] {
     padding-inline: 20px;
   }
   .px-\[30px\] {
     padding-inline: 30px;
   }
+  .px-\[50px\] {
+    padding-inline: 50px;
+  }
+  .px-\[70px\] {
+    padding-inline: 70px;
+  }
+  .px-\[y0px\] {
+    padding-inline: y0px;
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .py-\[0px\] {
+    padding-block: 0px;
+  }
+  .py-\[50px\] {
+    padding-block: 50px;
+  }
+  .pb-\[10px\] {
+    padding-bottom: 10px;
+  }
+  .pb-\[40px\] {
+    padding-bottom: 40px;
+  }
+  .pb-\[70px\] {
+    padding-bottom: 70px;
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -286,6 +351,18 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  .text-\[1\] {
+    color: 1;
+  }
+  .text-\[va\] {
+    color: va;
+  }
+  .text-\[var\(\)\] {
+    color: var();
+  }
+  .text-\[var\(--\)\] {
+    color: var(--);
   }
   .text-\[var\(--maroon-color\)\] {
     color: var(--maroon-color);
