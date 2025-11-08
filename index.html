@@ -4,10 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/src/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
-  <h1 class="text-3xl">
-    Hello world!
-  </h1>
+<body class="w-full min-h-screen">
+    <header class="w-full h-[100px] bg-[var(--bg-color)] flex items-center justify-between px-[30px]">
+        <div class="w-full gap-[10px] flex items-center">
+            <img src="assets/bakehub-logo.svg" alt="Bakehub Logo" class="w-[80px]" >
+            <h1 class="text-[var(--maroon-color)] font-bold text-[30px]">Bake Hub</h1>
+        </div>
+        <div class="flex w-full justify-end">
+            <ul class="flex gap-[40px] text-[18px] items-center text-[var(--maroon-color)]">
+                <li>Home</li>
+                <li>Menu</li>
+                <li>About Us</li>
+                
+                <li class="rounded-[50px] border py-2 px-[30px] flex gap-[5px]">
+                    <img src="assets/people-svg.svg" class="w-[17px]">
+                    <span>
+
+                    </span>Sign In</li>
+            </ul>
+        </div>
+    </header>
 </body>
 </html>

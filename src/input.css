@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+:root{
+    --bg-color:#FDF7E9;
+    --maroon-color:#4A1D1F;
+}
+*{
+    font-family: 'Poppins';
+}
