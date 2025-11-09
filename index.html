@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body class="w-full min-h-screen">
-    <header class="w-full h-[100px] bg-white flex items-center justify-between px-[30px] fixed">
+    <header class="w-full h-[100px] bg-white flex items-center justify-between px-[30px] fixed z-2">
         <div class="w-full gap-2.5 flex items-center">
             <img src="assets/bakehub-logo.svg" alt="Bakehub Logo" class="w-20">
             <h1 class="text-(--maroon-color) font-bold text-[30px]">Bake Hub</h1>
@@ -27,19 +27,26 @@
         </div>
     </header>
     <main class="flex-1 w-full min-h-screen">
-        <section class="w-full min-h-screen pt-[100px] flex justify-around items-center px-[50px] bg-[var(--bg-color)]">
+        <section class="w-full min-h-screen pt-[100px] relative z-1  flex justify-around items-center px-[50px] bg-[var(--bg-color)]">
             <img src="./assets/img/donut-pic-hero.png" style="width: 400px; height: 400px;" >
             <div style="width: 550px;" class="flex flex-col gap-5">
                 <h1 class="font-bold text-[40px] text-[var(--maroon-color)]">Indulge in Heavenly Sweets made Just for You!</h1>
                 <p class="text-[16px] text-(--gray-color)">Lorem ipsum dolor sit amet consectetur. Dictum et at posuere dolor lacus sed urna nisl. Fermentum et purus lectus nisi gravida morbi vitae condimentum ullamcorper. Justo diam duis in ullamcorper aliquam fringilla et sed semper. Sapien magna sodales nibh sapien viverra neque gravida risus.</p>
                 <div class="w-full flex justify-between">
-                    <a href="" class="py-2.5 px-18 bg-(--maroon-color) text-white text-[20px] rounded-[4px] border border-[var(--maroon-color)]">Order Now</a>
-                    <a href="" class="py-2.5 px-18 bg-white text-[var(--maroon-color)] text-[20px] rounded-[4px] border border-[var(--maroon-color)] ">See All Menu</a>
+                    <a href="" class="py-2.5 px-21 bg-(--maroon-color) text-white text-[16px] rounded-[4px] border border-[var(--maroon-color)]">Order Now</a>
+                    <a href="" class="py-2.5 px-21 bg-white text-[var(--maroon-color)] text-[16px] rounded-[4px] border border-[var(--maroon-color)] ">See All Menu</a>
                 </div>
             </div>  
         </section>
-        <section class="w-full min-h-screen relative">
-            
+        <section class="w-full min-h-screen relative flex items-center justify-around px-[50px]">
+            <img src="./assets/img/bg-cloud.png" class="absolute top-[-200px] z-0">
+            <div class="relative z-1 w-full max-w-[500px]">
+                <h1 class="text-[40px] text-(--maroon-color) font-bold ">We Bake for you Fresh from the oven!</h1>
+                <p class="text-(--gray-color) text-[16px]">Here’s our best creations that everyone loves. Lightness and sweetness of the cake make you want more and more. Start from cake, cookies and other creations.</p>
+            </div>
+            <div class="relative z-1">
+                <img src="/assets/img/cloud-bread.png" alt="Cloud Bread PNG" class="w-[400px]">
+            </div>
         </section>
     </main>
     <footer class="w-full h-[220px] bg-white flex px-[70px] items-center py-[50px]">
