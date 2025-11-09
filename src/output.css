@@ -168,6 +168,9 @@
   .fixed {
     position: fixed;
   }
+  .relative {
+    position: relative;
+  }
   .flex {
     display: flex;
   }
@@ -186,6 +189,12 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
   .w-20 {
     width: calc(var(--spacing) * 20);
   }
@@ -194,9 +203,6 @@
   }
   .w-\[25px\] {
     width: 25px;
-  }
-  .w-\[80px\] {
-    width: 80px;
   }
   .w-full {
     width: 100%;
@@ -231,17 +237,17 @@
   .justify-end {
     justify-content: flex-end;
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-2\.5 {
+    gap: calc(var(--spacing) * 2.5);
+  }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
-  .gap-4 {
-    gap: calc(var(--spacing) * 4);
-  }
-  .gap-7 {
-    gap: calc(var(--spacing) * 7);
-  }
-  .gap-8 {
-    gap: calc(var(--spacing) * 8);
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
@@ -249,17 +255,8 @@
   .gap-\[5px\] {
     gap: 5px;
   }
-  .gap-\[10px\] {
-    gap: 10px;
-  }
   .gap-\[20px\] {
     gap: 20px;
-  }
-  .gap-\[40px\] {
-    gap: 40px;
-  }
-  .rounded {
-    border-radius: 0.25rem;
   }
   .rounded-\[4px\] {
     border-radius: 4px;
@@ -271,106 +268,23 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-\[4\] {
-    border-style: var(--tw-border-style);
-    border-width: 4;
-  }
-  .border-\[4px\] {
-    border-style: var(--tw-border-style);
-    border-width: 4px;
-  }
-  .border-\[bg-colro\] {
-    border-color: bg-colro;
-  }
-  .border-\[var\(\)\] {
-    border-color: var();
-  }
-  .border-\[var\(--dark\)\] {
-    border-color: var(--dark);
-  }
   .border-\[var\(--maroon-color\)\] {
     border-color: var(--maroon-color);
-  }
-  .border-\[var\(--marro\)\] {
-    border-color: var(--marro);
-  }
-  .border-\[var\] {
-    border-color: var;
   }
   .bg-\(--maroon-color\) {
     background-color: var(--maroon-color);
   }
-  .bg-\[var\(\)\] {
-    background-color: var();
-  }
-  .bg-\[var\(--\)\] {
-    background-color: var(--);
-  }
   .bg-\[var\(--bg-color\)\] {
     background-color: var(--bg-color);
-  }
-  .bg-\[var\(--darkg\)\] {
-    background-color: var(--darkg);
-  }
-  .bg-\[var\(--maroon\)\] {
-    background-color: var(--maroon);
-  }
-  .bg-\[var\(--maroon-color\)\] {
-    background-color: var(--maroon-color);
-  }
-  .bg-\[var\] {
-    background-color: var;
-  }
-  .bg-amber-200 {
-    background-color: var(--color-amber-200);
   }
   .bg-white {
     background-color: var(--color-white);
   }
-  .p-\[10px\] {
-    padding: 10px;
-  }
-  .px-1 {
-    padding-inline: calc(var(--spacing) * 1);
-  }
-  .px-8 {
-    padding-inline: calc(var(--spacing) * 8);
-  }
-  .px-10 {
-    padding-inline: calc(var(--spacing) * 10);
-  }
-  .px-12 {
-    padding-inline: calc(var(--spacing) * 12);
-  }
-  .px-15 {
-    padding-inline: calc(var(--spacing) * 15);
-  }
-  .px-17 {
-    padding-inline: calc(var(--spacing) * 17);
-  }
   .px-18 {
     padding-inline: calc(var(--spacing) * 18);
   }
-  .px-19 {
-    padding-inline: calc(var(--spacing) * 19);
-  }
-  .px-20 {
-    padding-inline: calc(var(--spacing) * 20);
-  }
-  .px-\[2\] {
-    padding-inline: 2;
-  }
-  .px-\[10px\] {
-    padding-inline: 10px;
-  }
-  .px-\[20px\] {
-    padding-inline: 20px;
-  }
   .px-\[30px\] {
     padding-inline: 30px;
-  }
-  .px-\[40px\] {
-    padding-inline: 40px;
   }
   .px-\[50px\] {
     padding-inline: 50px;
@@ -384,23 +298,20 @@
   .py-2\.5 {
     padding-block: calc(var(--spacing) * 2.5);
   }
-  .py-\[10px\] {
-    padding-block: 10px;
-  }
   .py-\[50px\] {
     padding-block: 50px;
   }
   .pt-\[100px\] {
     padding-top: 100px;
   }
+  .text-\[16px\] {
+    font-size: 16px;
+  }
   .text-\[18px\] {
     font-size: 18px;
   }
   .text-\[20px\] {
     font-size: 20px;
-  }
-  .text-\[24px\] {
-    font-size: 24px;
   }
   .text-\[30px\] {
     font-size: 30px;
@@ -415,35 +326,11 @@
   .text-\(--gray-color\) {
     color: var(--gray-color);
   }
-  .text-\[\#\] {
-    color: #;
-  }
-  .text-\[px\] {
-    color: px;
-  }
-  .text-\[var\(\)\] {
-    color: var();
-  }
-  .text-\[var\(--\)\] {
-    color: var(--);
-  }
-  .text-\[var\(--gray\)\] {
-    color: var(--gray);
-  }
-  .text-\[var\(--gray-color\)\] {
-    color: var(--gray-color);
-  }
-  .text-\[var\(--maroo\)\] {
-    color: var(--maroo);
-  }
-  .text-\[var\(--maroon\)\] {
-    color: var(--maroon);
+  .text-\(--maroon-color\) {
+    color: var(--maroon-color);
   }
   .text-\[var\(--maroon-color\)\] {
     color: var(--maroon-color);
-  }
-  .text-\[var\] {
-    color: var;
   }
   .text-white {
     color: var(--color-white);
