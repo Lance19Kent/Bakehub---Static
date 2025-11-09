@@ -177,8 +177,35 @@
   .relative {
     position: relative;
   }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+  .top-1 {
+    top: calc(var(--spacing) * 1);
+  }
+  .top-2 {
+    top: calc(var(--spacing) * 2);
+  }
+  .top-2\.5 {
+    top: calc(var(--spacing) * 2.5);
+  }
+  .top-3 {
+    top: calc(var(--spacing) * 3);
+  }
+  .top-12 {
+    top: calc(var(--spacing) * 12);
+  }
   .top-\[-200px\] {
     top: -200px;
+  }
+  .top-\[50px\] {
+    top: 50px;
+  }
+  .left-2 {
+    left: calc(var(--spacing) * 2);
+  }
+  .left-2\.5 {
+    left: calc(var(--spacing) * 2.5);
   }
   .z-0 {
     z-index: 0;
@@ -512,6 +539,9 @@
   .underline {
     text-decoration-line: underline;
   }
+  .opacity-0 {
+    opacity: 0%;
+  }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
@@ -520,9 +550,63 @@
     --tw-outline-style: none;
     outline-style: none;
   }
+  .peer-placeholder-shown\:opacity-100 {
+    &:is(:where(.peer):placeholder-shown ~ *) {
+      opacity: 100%;
+    }
+  }
+  .peer-focus\:opacity-0 {
+    &:is(:where(.peer):focus ~ *) {
+      opacity: 0%;
+    }
+  }
   .placeholder\:px-10 {
     &::placeholder {
       padding-inline: calc(var(--spacing) * 10);
+    }
+  }
+  .placeholder\:pl-3 {
+    &::placeholder {
+      padding-left: calc(var(--spacing) * 3);
+    }
+  }
+  .placeholder\:pl-5 {
+    &::placeholder {
+      padding-left: calc(var(--spacing) * 5);
+    }
+  }
+  .placeholder\:pl-6 {
+    &::placeholder {
+      padding-left: calc(var(--spacing) * 6);
+    }
+  }
+  .placeholder\:pl-10 {
+    &::placeholder {
+      padding-left: calc(var(--spacing) * 10);
+    }
+  }
+  .placeholder\:text-\(--gray-color\) {
+    &::placeholder {
+      color: var(--gray-color);
+    }
+  }
+  .placeholder\:opacity-0 {
+    &::placeholder {
+      opacity: 0%;
+    }
+  }
+  .placeholder-shown\:placeholder\:opacity-100 {
+    &:placeholder-shown {
+      &::placeholder {
+        opacity: 100%;
+      }
+    }
+  }
+  .focus\:placeholder\:opacity-0 {
+    &:focus {
+      &::placeholder {
+        opacity: 0%;
+      }
     }
   }
 }
