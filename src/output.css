@@ -300,6 +300,12 @@
   .w-\[200px\] {
     width: 200px;
   }
+  .w-\[250px\] {
+    width: 250px;
+  }
+  .w-\[300px\] {
+    width: 300px;
+  }
   .w-\[400px\] {
     width: 400px;
   }
@@ -845,6 +851,17 @@
       @media (hover: hover) {
         text-decoration-line: underline;
       }
+    }
+  }
+  .focus\:border {
+    &:focus {
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+    }
+  }
+  .focus\:border-\(--maroon-color\) {
+    &:focus {
+      border-color: var(--maroon-color);
     }
   }
   .focus\:placeholder\:opacity-0 {

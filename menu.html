@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body class="w-full min-h-screen">
+    
     <!-- Header -->
     <header class="w-full h-20 bg-white flex items-center justify-between px-[50px] fixed z-2">
         <div class="w-full gap-2.5 flex items-center">
@@ -20,14 +21,14 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="aboutUs.html">About Us</a></li>
-                <li class="relative z-1"><input type="text" placeholder="Search" class="peer relative w-[200px] border border-(--maroon-color) outline-none py-2 rounded-[50px] text-[14px] placeholder:text-[16px] pr-2.5 pl-2.5 placeholder:pl-6 placeholder:text-(--gray-color) text-black placeholder-shown:placeholder:opacity-100 focus:placeholder:opacity-0">
+                <li class="relative z-1"><input type="text" placeholder="Search" class="peer relative w-[250px] border border-[#DBDFD0]  outline-none py-2 focus:border-(--maroon-color) rounded-sm text-[14px] placeholder:text-[16px] pr-2.5 pl-2.5 placeholder:pl-6 placeholder:text-(--gray-color) text-black placeholder-shown:placeholder:opacity-100 focus:placeholder:opacity-0">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-[7px] left-2.5 z-0 peer-placeholder-shown:opacity-100 peer-focus:opacity-0 opacity-0">
                     <path d="M12.5 14H11.71L11.43 13.73C12.444 12.5541 13.0012 11.0527 13 9.5C13 8.21442 12.6188 6.95772 11.9046 5.8888C11.1903 4.81988 10.1752 3.98676 8.98744 3.49479C7.79973 3.00282 6.49279 2.87409 5.23192 3.1249C3.97104 3.3757 2.81285 3.99477 1.90381 4.90381C0.994767 5.81285 0.375703 6.97104 0.124899 8.23192C-0.125905 9.49279 0.00281635 10.7997 0.494786 11.9874C0.986756 13.1752 1.81988 14.1903 2.8888 14.9046C3.95772 15.6188 5.21442 16 6.5 16C8.11 16 9.59 15.41 10.73 14.43L11 14.71V15.5L16 20.49L17.49 19L12.5 14ZM6.5 14C4.01 14 2 11.99 2 9.5C2 7.01 4.01 5 6.5 5C8.99 5 11 7.01 11 9.5C11 11.99 8.99 14 6.5 14Z" fill="#D1D1D1"/>
                 </svg>
                 </li>
-                 <li>
-                    <a href="login.html" class="text-white rounded-[50px] border py-2 px-10 flex gap-[7px] bg-(--maroon-color) items-center justify-center">
-                        <svg viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-white w-4.5">
+                <li>
+                    <a href="login.html" class="text-white rounded-sm border py-2 px-10 flex gap-[7px]  bg-(--maroon-color) items-center justify-center fill-white ease-out duration-300 hover:text-(--maroon-color) hover:bg-white hover:fill-(--maroon-color)">
+                        <svg viewBox="0 0 14 13"  xmlns="http://www.w3.org/2000/svg" class=" w-4.5">
                             <mask id="mask0_134_630" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="7" width="11" height="6">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.97131H10.1225V12.7044H0V7.97131Z" fill="white"/>
                             </mask>
@@ -35,7 +36,7 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M5.06117 8.97133C3.2085 8.97133 0.999837 9.20933 0.999837 10.346C0.999837 11.2473 2.3665 11.7047 5.06117 11.7047C7.75584 11.7047 9.12251 11.2427 9.12251 10.3327C9.12251 9.42933 7.75584 8.97133 5.06117 8.97133ZM5.06133 12.7046C3.67733 12.7046 0 12.7046 0 10.346C0 7.97131 3.80933 7.97131 5.06133 7.97131C7.234 7.97131 10.1227 8.21598 10.1227 10.3326C10.1227 12.7046 6.31333 12.7046 5.06133 12.7046Z" />
                             </g>
                             <mask id="mask1_134_630" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="7" width="4" height="4">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5635 7.65564H13.3193V10.974H10.5635V7.65564Z" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5635 7.65564H13.3193V10.974H10.5635V7.65564Z" />
                             </mask>
                             <g mask="url(#mask1_134_630)">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9303 10.974C11.7283 10.974 11.5383 10.8507 11.463 10.6513C11.365 10.3933 11.495 10.104 11.753 10.0067C12.3197 9.79199 12.3197 9.52999 12.3197 9.41799C12.3197 9.03999 11.8723 8.78133 10.9903 8.64999C10.717 8.60866 10.5283 8.35399 10.569 8.08133C10.6103 7.80799 10.8697 7.62466 11.1377 7.65999C12.9417 7.92999 13.3197 8.76533 13.3197 9.41799C13.3197 9.90399 13.1097 10.562 12.1077 10.9413C12.0497 10.9633 11.9897 10.974 11.9303 10.974Z"/>
@@ -47,10 +48,10 @@
                     </a>  
                 </li>
             </ul>
-            </ul>
         </div>
     </header>
     <!--/ Header -->
+
     <main class="flex-1 w-full min-h-screen">
 
     </main>
