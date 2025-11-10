@@ -726,6 +726,10 @@
     --tw-duration: 150ms;
     transition-duration: 150ms;
   }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
   .ease-in {
     --tw-ease: var(--ease-in);
     transition-timing-function: var(--ease-in);
@@ -777,6 +781,41 @@
     &:placeholder-shown {
       &::placeholder {
         opacity: 100%;
+      }
+    }
+  }
+  .hover\:bg-\(--maroon-color\) {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--maroon-color);
+      }
+    }
+  }
+  .hover\:bg-white {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-white);
+      }
+    }
+  }
+  .hover\:fill-\(--maroon-color\) {
+    &:hover {
+      @media (hover: hover) {
+        fill: var(--maroon-color);
+      }
+    }
+  }
+  .hover\:text-\(--maroon-color\) {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--maroon-color);
+      }
+    }
+  }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
       }
     }
   }
