@@ -18,7 +18,7 @@
     </header>
     <!--/ Header -->
     <main class=" w-full min-h-screen flex justify-center items-center pt-[70px]">
-        <form action="" class="w-full max-w-[650px] h-[500px] bg-white rounded-[25px] border border-[#DBDFD0] py-8 px-15 flex flex-col gap-2">
+        <form action="" class="w-full max-w-[650px] h-fit bg-white rounded-[25px] border border-[#DBDFD0] py-8 px-15 flex flex-col gap-2">
             <div class=" w-full">
                 <a href="index.html" class="flex items-center gap-2.5 w-fit">                
             <svg width="19" height="8" viewBox="0 0 19 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,8 +27,10 @@
                 <h5 class="text-(--maroon-color) text-[14px] font-medium">Back to Home</h5></a>
 
             </div>
-            <h1 class="font-bold text-[40px]">Welcome back! </h1>
-            <p class="text-[16px] text-(--gray-color)">Time to treat yourself again! Sign in to continue your sweet journey with BakeryHub.</p>
+            <div class="flex flex-col">
+                <h1 class="font-bold text-[40px]">Welcome back! </h1>
+                <p class="text-[14px] text-(--gray-color) leading-6 pb-3.5">Time to treat yourself again! Sign in to continue your sweet journey with BakeryHub.</p>
+            </div>
             <div class="flex flex-col gap-6">
                 <div class="w-full flex flex-col gap-2">
                     <label for="" class="font-semibold text-[14px]">Email Address</label>
@@ -43,9 +45,6 @@
                 <div class="flex text-[14px] gap-1 justify-center">
                     <p class="text-(--gray-color)">Don't have an account?</p><a href="signUp.html" class="text-(--maroon-color) font-bold">Sign up for free</a>
                 </div>
-            </div>
-            <div>
-
             </div>
         </form>
     </main> 
