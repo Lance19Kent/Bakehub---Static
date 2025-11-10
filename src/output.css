@@ -9,8 +9,10 @@
       "Courier New", monospace;
     --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-amber-400: oklch(82.8% 0.189 84.429);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --font-weight-medium: 500;
     --font-weight-bold: 700;
     --radius-sm: 0.25rem;
     --radius-xl: 0.75rem;
@@ -222,6 +224,18 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
+  }
+  .w-4\.5 {
+    width: calc(var(--spacing) * 4.5);
+  }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
   .w-15 {
     width: calc(var(--spacing) * 15);
   }
@@ -309,6 +323,9 @@
   .gap-\[5px\] {
     gap: 5px;
   }
+  .gap-\[7px\] {
+    gap: 7px;
+  }
   .rounded-\[4px\] {
     border-radius: 4px;
   }
@@ -358,8 +375,17 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .px-1 {
+    padding-inline: calc(var(--spacing) * 1);
+  }
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
+  }
+  .px-18 {
+    padding-inline: calc(var(--spacing) * 18);
+  }
+  .px-19 {
+    padding-inline: calc(var(--spacing) * 19);
   }
   .px-21 {
     padding-inline: calc(var(--spacing) * 21);
@@ -412,6 +438,9 @@
   .text-center {
     text-align: center;
   }
+  .text-\[1px\] {
+    font-size: 1px;
+  }
   .text-\[14px\] {
     font-size: 14px;
   }
@@ -420,6 +449,9 @@
   }
   .text-\[17px\] {
     font-size: 17px;
+  }
+  .text-\[18px\] {
+    font-size: 18px;
   }
   .text-\[20px\] {
     font-size: 20px;
@@ -440,6 +472,10 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
   .whitespace-nowrap {
     white-space: nowrap;
   }
@@ -451,6 +487,9 @@
   }
   .text-\[var\(--maroon-color\)\] {
     color: var(--maroon-color);
+  }
+  .text-black {
+    color: var(--color-black);
   }
   .text-white {
     color: var(--color-white);
