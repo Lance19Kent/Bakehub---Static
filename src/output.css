@@ -224,6 +224,10 @@
   .table {
     display: table;
   }
+  .size-6 {
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
+  }
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
@@ -453,6 +457,9 @@
   }
   .fill-white {
     fill: var(--color-white);
+  }
+  .stroke-white {
+    stroke: var(--color-white);
   }
   .p-0 {
     padding: calc(var(--spacing) * 0);
@@ -791,6 +798,13 @@
       }
     }
   }
+  .hover\:bg-transparent {
+    &:hover {
+      @media (hover: hover) {
+        background-color: transparent;
+      }
+    }
+  }
   .hover\:bg-white {
     &:hover {
       @media (hover: hover) {
@@ -802,6 +816,13 @@
     &:hover {
       @media (hover: hover) {
         fill: var(--maroon-color);
+      }
+    }
+  }
+  .hover\:stroke-\(--maroon-color\) {
+    &:hover {
+      @media (hover: hover) {
+        stroke: var(--maroon-color);
       }
     }
   }

@@ -21,13 +21,13 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="aboutUs.html">About Us</a></li>
-                <li class="relative z-1"><input type="text" placeholder="Search" class="peer relative w-[200px] border border-(--maroon-color) outline-none py-2 rounded-[50px] text-[14px] placeholder:text-[16px] pr-2.5 pl-2.5 placeholder:pl-6 placeholder:text-(--gray-color) text-black placeholder-shown:placeholder:opacity-100 focus:placeholder:opacity-0">
+                <li class="relative z-1"><input type="text" placeholder="Search" class="peer relative w-[200px] border border-(--maroon-color) outline-none py-2 rounded-sm text-[14px] placeholder:text-[16px] pr-2.5 pl-2.5 placeholder:pl-6 placeholder:text-(--gray-color) text-black placeholder-shown:placeholder:opacity-100 focus:placeholder:opacity-0">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-[7px] left-2.5 z-0 peer-placeholder-shown:opacity-100 peer-focus:opacity-0 opacity-0">
                     <path d="M12.5 14H11.71L11.43 13.73C12.444 12.5541 13.0012 11.0527 13 9.5C13 8.21442 12.6188 6.95772 11.9046 5.8888C11.1903 4.81988 10.1752 3.98676 8.98744 3.49479C7.79973 3.00282 6.49279 2.87409 5.23192 3.1249C3.97104 3.3757 2.81285 3.99477 1.90381 4.90381C0.994767 5.81285 0.375703 6.97104 0.124899 8.23192C-0.125905 9.49279 0.00281635 10.7997 0.494786 11.9874C0.986756 13.1752 1.81988 14.1903 2.8888 14.9046C3.95772 15.6188 5.21442 16 6.5 16C8.11 16 9.59 15.41 10.73 14.43L11 14.71V15.5L16 20.49L17.49 19L12.5 14ZM6.5 14C4.01 14 2 11.99 2 9.5C2 7.01 4.01 5 6.5 5C8.99 5 11 7.01 11 9.5C11 11.99 8.99 14 6.5 14Z" fill="#D1D1D1"/>
                 </svg>
                 </li>
                 <li>
-                    <a href="login.html" class="text-white rounded-[50px] border py-2 px-10 flex gap-[7px]  bg-(--maroon-color) items-center justify-center fill-white ease-out duration-300 hover:text-(--maroon-color) hover:bg-white hover:fill-(--maroon-color)">
+                    <a href="login.html" class="text-white rounded-sm border py-2 px-10 flex gap-[7px]  bg-(--maroon-color) items-center justify-center fill-white ease-out duration-300 hover:text-(--maroon-color) hover:bg-white hover:fill-(--maroon-color)">
                         <svg viewBox="0 0 14 13"  xmlns="http://www.w3.org/2000/svg" class=" w-4.5">
                             <mask id="mask0_134_630" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="7" width="11" height="6">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.97131H10.1225V12.7044H0V7.97131Z" fill="white"/>
@@ -90,9 +90,12 @@
                         <h1 class="font-bold text-[20px]">Sanrio Cake</h1>
                         <p class="text-[14px] text-center text-(--gray-color)">This cake is made with eggs, flour, sugar, butter, strawberry puree, cream, and other ingredients.</p>
                         <p class="text-[20px] font-bold text-(--maroon-color)">₱5,000.00</p>
-                        <a href="#" class="flex gap-2.5 w-full bg-(--maroon-color) justify-center rounded-sm">
-                            <img src="/assets/cart-svg.svg">
-                            <span class="text-white p-2">Add to Cart</span></a>
+                        <a href="#" class="flex gap-2.5 w-full bg-(--maroon-color) justify-center items-center rounded-sm text-white stroke-white duration-300 ease-out hover:bg-white hover:text-(--maroon-color) border border-(--maroon-color) hover:stroke-(--maroon-color)">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>
+                            <span class=" p-2">Add to Cart</span>
+                        </a>
                     </div>
                 </div>
                 <div class="w-full max-w-[250px] rounded-xl border border-[#DBDFD0] flex items-center flex-col">
@@ -101,9 +104,12 @@
                         <h1 class="font-bold text-[20px]">Sanrio Cookies</h1>
                         <p class="text-[14px] text-center text-(--gray-color)">Made with eggs, flour, sugar, butter, vanilla extract, food coloring, and other ingredients.</p>
                         <p class="text-[20px] font-bold text-(--maroon-color)">₱ 100.00</p>
-                        <a href="#" class="flex gap-2.5 w-full bg-(--maroon-color) justify-center rounded-sm">
-                            <img src="/assets/cart-svg.svg">
-                            <span class="text-white p-2">Add to Cart</span></a>
+                        <a href="#" class="flex gap-2.5 w-full bg-(--maroon-color) justify-center items-center rounded-sm text-white stroke-white duration-300 ease-out hover:bg-white hover:text-(--maroon-color) border border-(--maroon-color) hover:stroke-(--maroon-color)">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>
+                            <span class=" p-2">Add to Cart</span>
+                        </a>
                     </div>
                 </div>
                 <div class="w-full max-w-[250px] rounded-xl border border-[#DBDFD0] flex items-center flex-col">
@@ -112,9 +118,12 @@
                         <h1 class="font-bold text-[17px] text-center">Cinnamoroll Cake Pops</h1>
                         <p class="text-[14px] text-center text-(--gray-color)">This cake is made with eggs, flour, sugar, butter, white chocolate, vanilla extract, and other ingredients.</p>
                         <p class="text-[20px] font-bold text-(--maroon-color)">₱ 150.00</p>
-                        <a href="#" class="flex gap-2.5 w-full bg-(--maroon-color) justify-center rounded-sm">
-                            <img src="/assets/cart-svg.svg">
-                            <span class="text-white p-2">Add to Cart</span></a>
+                        <a href="#" class="flex gap-2.5 w-full bg-(--maroon-color) justify-center items-center rounded-sm text-white stroke-white duration-300 ease-out hover:bg-white hover:text-(--maroon-color) border border-(--maroon-color) hover:stroke-(--maroon-color)">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>
+                            <span class=" p-2">Add to Cart</span>
+                        </a>
                     </div>
                 </div>
                 <div class="w-full max-w-[250px] rounded-xl border border-[#DBDFD0] flex items-center flex-col">
@@ -123,13 +132,16 @@
                         <h1 class="font-bold text-[20px]">Sanrio Cakesickles</h1>
                         <p class="text-[14px] text-center text-(--gray-color)">Made with eggs, flour, sugar, butter, chocolate, cream, food coloring, and other ingredients.</p>
                         <p class="text-[20px] font-bold text-(--maroon-color)">₱5,000.00</p>
-                        <a href="#" class="flex gap-2.5 w-full bg-(--maroon-color) justify-center rounded-sm">
-                            <img src="/assets/cart-svg.svg">
-                            <span class="text-white p-2">Add to Cart</span></a>
+                        <a href="#" class="flex gap-2.5 w-full bg-(--maroon-color) justify-center items-center rounded-sm text-white stroke-white duration-300 ease-out hover:bg-white hover:text-(--maroon-color) border border-(--maroon-color) hover:stroke-(--maroon-color)">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>
+                            <span class=" p-2">Add to Cart</span>
+                        </a>
                     </div>
                 </div>
             </div>
-            <a href="#" class="px-[40px] py-[10px] bg-(--maroon-color) text-[18px] text-center font-medium text-white rounded-[50px]">View More</a>
+            <a href="#" class="px-10 py-2.5 bg-(--maroon-color) text-[18px] text-center font-medium text-white rounded-[50px] border border-(--maroon-color) duration-300 ease-out hover:bg-white hover:text-(--maroon-color)">View More</a>
         </section>
         <!--/ Check out Our Best Sellers Section -->
 
