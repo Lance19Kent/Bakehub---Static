@@ -7,11 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
-<body class="w-full min-h-screen">
 
-    <!-- Header -->
-    <header class="w-full h-20 bg-white flex items-center justify-between px-[50px] fixed z-2">
+</head>
+<body class="w-full min-h-screen flex flex-col">
+
+    <header class="w-full h-20 bg-white flex items-center justify-between px-[50px] fixed z-20 shadow-md">
         <div class="w-full gap-2.5 flex items-center">
             <img src="assets/bakehub-logo.svg" alt="Bakehub Logo" class="w-15">
             <a href="index.html" class="text-(--maroon-color) font-bold text-[30px]">Bake Hub</a>
@@ -21,14 +21,14 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="aboutUs.html">About Us</a></li>
-                <li class="relative z-1"><input type="text" placeholder="Search" class="peer relative w-[250px] border border-(--gray-color)  outline-none py-2 focus:border-(--maroon-color) rounded-sm text-[14px] placeholder:text-[16px] pr-2.5 pl-2.5 placeholder:pl-6 placeholder:text-(--gray-color) text-black placeholder-shown:placeholder:opacity-100 focus:placeholder:opacity-0">
+                <li class="relative z-1"><input type="text" placeholder="Search" class="peer relative w-[250px] border border-(--gray-color) outline-none py-2 focus:border-(--maroon-color) rounded-sm text-[14px] placeholder:text-[16px] pr-2.5 pl-2.5 placeholder:pl-6 placeholder:text-(--gray-color) text-black placeholder-shown:placeholder:opacity-100 focus:placeholder:opacity-0">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-[7px] left-2.5 z-0 peer-placeholder-shown:opacity-100 peer-focus:opacity-0 opacity-0">
                     <path d="M12.5 14H11.71L11.43 13.73C12.444 12.5541 13.0012 11.0527 13 9.5C13 8.21442 12.6188 6.95772 11.9046 5.8888C11.1903 4.81988 10.1752 3.98676 8.98744 3.49479C7.79973 3.00282 6.49279 2.87409 5.23192 3.1249C3.97104 3.3757 2.81285 3.99477 1.90381 4.90381C0.994767 5.81285 0.375703 6.97104 0.124899 8.23192C-0.125905 9.49279 0.00281635 10.7997 0.494786 11.9874C0.986756 13.1752 1.81988 14.1903 2.8888 14.9046C3.95772 15.6188 5.21442 16 6.5 16C8.11 16 9.59 15.41 10.73 14.43L11 14.71V15.5L16 20.49L17.49 19L12.5 14ZM6.5 14C4.01 14 2 11.99 2 9.5C2 7.01 4.01 5 6.5 5C8.99 5 11 7.01 11 9.5C11 11.99 8.99 14 6.5 14Z" fill="#D1D1D1"/>
-                </svg>
+                    </svg>
                 </li>
                 <li>
-                    <a href="login.html" class="text-white rounded-sm border py-2 px-10 flex gap-[7px]  bg-(--maroon-color) items-center justify-center fill-white ease-out duration-300 hover:text-(--maroon-color) hover:bg-white hover:fill-(--maroon-color)">
-                        <svg viewBox="0 0 14 13"  xmlns="http://www.w3.org/2000/svg" class=" w-4.5">
+                    <a href="login.html" class="text-white rounded-sm border py-2 px-10 flex gap-[7px] bg-(--maroon-color) items-center justify-center fill-white ease-out duration-300 hover:text-(--maroon-color) hover:bg-white hover:fill-(--maroon-color)">
+                        <svg viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg" class=" w-4.5">
                             <mask id="mask0_134_630" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="7" width="11" height="6">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.97131H10.1225V12.7044H0V7.97131Z" fill="white"/>
                             </mask>
@@ -45,57 +45,191 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M5.06088 1.00002C3.72421 1.00002 2.63688 2.08735 2.63688 3.42335C2.63688 4.75935 3.72421 5.84669 5.06088 5.84669H5.08155C5.72422 5.84402 6.32955 5.59135 6.78355 5.13335C7.23821 4.67669 7.48688 4.06935 7.48421 3.42535C7.48421 2.08735 6.39688 1.00002 5.06088 1.00002ZM5.06072 6.84667C3.17272 6.84667 1.63672 5.31067 1.63672 3.42333C1.63672 1.536 3.17272 0 5.06072 0C6.94805 0 8.48405 1.536 8.48405 3.42333C8.48805 4.33267 8.13539 5.19133 7.49272 5.838C6.85139 6.48533 5.99472 6.84333 5.08339 6.84667H5.06072Z" />
                         </svg>
                         <span>Sign In</span>
-                    </a>  
+                    </a> 
                 </li>
             </ul>
         </div>
     </header>
-    <!--/ Header -->
+    <main class="flex-1 w-full px-10 py-6 pt-[120px] pb-[50px]">
+        <h1 class="text-[46px] font-semibold mb-8">User Profile</h1>
 
-        <main class="flex-1 w-full min-h-screen px-10 py-6 flex gap-20 flex-col pt-[100px]">
-
-            <form action="" class="w-full flex flex-col gap-3">
-                <div class="w-full flex justify-between items-end">
-                    <h1 class="text-[46px] font-semibold">User Profile</h1>
-                    <div  class="text-white text-[16px] px-5 py-[13px] flex items-center gap-2.5 rounded-[10px] bg-[rgb(2,117,216)]">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
-                        </svg>
-
-                        <button>Edit Profile </button>
+        <div class="w-full flex gap-10">
+            
+            <div class="w-1/4 max-w-[300px] flex flex-col gap-6">
+                <div class="flex items-center gap-3 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <img src="/assets/img/ice-panda.jpg" alt="User's Profile Picture" class="w-14 h-14 rounded-full object-cover border-2 border-(--maroon-color)">
+                    <div class="flex flex-col">
+                        <h2 class="text-lg font-semibold text-gray-800">John Sackman</h2>
+                        <p class="text-sm text-gray-500">Customer</p>
                     </div>
                 </div>
-                <div class="border w-full h-[600px] flex flex-col gap-10 rounded-sm border-(--bg-gray-color) pl-10">
-                    <div class="w-full flex pt-10 items-center gap-5">
-                        <img src="/assets/img/ice-panda.jpg" alt="User's Profile Picture" class="w-full max-w-[250px] rounded-[50%]">
-                        <div class="flex flex-col gap-5">
-                            <h1 class="text-[44px] font-medium">John Sackman</h1>
-                            <div class="w-full">
-                                <div class="text-green-700 text-[22px] px-[30px] py-[20px] inline rounded-[10px] bg-[rgba(34,187,51,0.3)]">Customer</div>
+
+                <div class="flex flex-col gap-1">
+                    <a href="#personal-info" class="text-lg font-medium py-3 px-4 rounded-lg text-white bg-(--maroon-color) hover:bg-opacity-90 transition duration-150 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+                        Personal Info
+                    </a>
+                    <a href="#my-purchases" class="text-lg font-medium py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 transition duration-150 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-4 0c0-1.1-.9-2-2-2s-2 .9-2 2h4zm-2 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
+                        My Purchases
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-3/4 flex flex-col gap-10">
+                
+                <section id="personal-info" class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+                    <div class="w-full flex justify-between items-center mb-6">
+                        <h2 class="text-3xl font-semibold text-(--maroon-color)">Personal Information</h2>
+                        <button class="text-white text-[16px] px-5 py-[10px] flex items-center gap-2 rounded-[10px] bg-[rgb(2,117,216)] hover:bg-[rgb(0,99,184)] transition duration-150">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                            </svg>
+                            <span>Edit Profile</span>
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-x-12 gap-y-6 text-gray-700">
+                        <div class="flex flex-col">
+                            <span class="text-sm font-light text-gray-500">Full Name</span>
+                            <span class="text-xl font-medium">John Sackman</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-sm font-light text-gray-500">Email Address</span>
+                            <span class="text-xl font-medium">john.sackman@example.com</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-sm font-light text-gray-500">Contact Number</span>
+                            <span class="text-xl font-medium">+63 917 123 4567</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-sm font-light text-gray-500">Date of Birth</span>
+                            <span class="text-xl font-medium">January 1, 1990</span>
+                        </div>
+                        <div class="col-span-2 flex flex-col">
+                            <span class="text-sm font-light text-gray-500">Shipping Address</span>
+                            <span class="text-xl font-medium">9998 Hayes Isle, Mantefurt 03581</span>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="my-purchases" class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+                    <h2 class="text-3xl font-semibold text-(--maroon-color) mb-6">My Purchases</h2>
+                    
+                    <div class="flex border-b border-gray-200 mb-6">
+                        <button class="tab-button text-lg font-medium px-6 py-3 border-b-2 border-(--maroon-color) text-(--maroon-color) transition duration-150">To Pay (2)</button>
+                        <button class="tab-button text-lg font-medium px-6 py-3 border-b-2 border-transparent text-gray-500 hover:text-(--maroon-color) hover:border-(--maroon-color) transition duration-150">To Ship (5)</button>
+                        <button class="tab-button text-lg font-medium px-6 py-3 border-b-2 border-transparent text-gray-500 hover:text-(--maroon-color) hover:border-(--maroon-color) transition duration-150">To Receive (3)</button>
+                        <button class="tab-button text-lg font-medium px-6 py-3 border-b-2 border-transparent text-gray-500 hover:text-(--maroon-color) hover:border-(--maroon-color) transition duration-150">Completed (12)</button>
+                        <button class="tab-button text-lg font-medium px-6 py-3 border-b-2 border-transparent text-gray-500 hover:text-(--maroon-color) hover:border-(--maroon-color) transition duration-150">Cancelled (1)</button>
+                    </div>
+
+                    <div id="purchase-content" class="flex flex-col gap-4">
+                        <div class="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition duration-200">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-sm font-semibold text-red-600">STATUS: TO PAY</span>
+                                <span class="text-sm text-gray-500">Order ID: #BHU98765</span>
+                            </div>
+                            <div class="flex gap-4 items-center border-t pt-3">
+                                <img src="/assets/img/example-cake.jpg" alt="Product Image" class="w-16 h-16 object-cover rounded">
+                                <div class="flex-1">
+                                    <h3 class="font-medium">Red Velvet Cake - 6 inch</h3>
+                                    <p class="text-sm text-gray-500">Quantity: 1</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-lg font-bold text-(--maroon-color)">₱ 1,250.00</p>
+                                    <button class="mt-1 text-sm text-white bg-green-500 px-4 py-1 rounded hover:bg-green-600">Pay Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition duration-200">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-sm font-semibold text-orange-600">STATUS: TO SHIP</span>
+                                <span class="text-sm text-gray-500">Order ID: #BHU98764</span>
+                            </div>
+                            <div class="flex gap-4 items-center border-t pt-3">
+                                <img src="/assets/img/example-brownies.jpg" alt="Product Image" class="w-16 h-16 object-cover rounded">
+                                <div class="flex-1">
+                                    <h3 class="font-medium">Decadent Chocolate Brownies</h3>
+                                    <p class="text-sm text-gray-500">Quantity: 2 boxes</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-lg font-bold text-(--maroon-color)">₱ 600.00</p>
+                                    <span class="mt-1 text-xs text-gray-400">Packaging in progress</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <hr class="border border-(--bg-gray-color)">
-                </div>
-            </form>
+                </section>
 
-        </main>
+            </div>
+        </div>
+
+    </main>
     
-        <!-- Footer -->
-        <footer class="w-full h-[220px] bg-(--bg-color) flex px-[50px] items-center py-[50px]">
-            <div class="w-full h-full flex flex-col gap-5 justify-end">
-                <h1 class="text-[30px] font-bold text-(--maroon-color)">Visit Us</h1>
-                <p class="text-[16px] text-(--gray-color)">9998 Hayes Isle, Mantefurt 03581</p>
-                <p class="text-[16px] text-(--gray-color)">505-418-0415</p>
-            </div>
-            <div class="w-full h-full flex gap-5 items-end justify-end">
-                <p class="text-[16px] text-(--gray-color)">Follow Us:</p>
-                <img src="assets/Facebook.svg" class="w-[25px]">
-                <img src="assets/Instagram.svg" class="w-[25px]">
-            </div>
-        </footer>
-        <!--/ Footer  -->
+    <footer class="w-full h-[220px] bg-(--bg-color) flex px-[50px] items-center py-[50px] mt-auto">
+        <div class="w-full h-full flex flex-col gap-5 justify-end">
+            <h1 class="text-[30px] font-bold text-(--maroon-color)">Visit Us</h1>
+            <p class="text-[16px] text-gray-500">9998 Hayes Isle, Mantefurt 03581</p>
+            <p class="text-[16px] text-gray-500">505-418-0415</p>
+        </div>
+        <div class="w-full h-full flex gap-5 items-end justify-end">
+            <p class="text-[16px] text-gray-500">Follow Us:</p>
+            <img src="assets/Facebook.svg" class="w-[25px]" alt="Facebook">
+            <img src="assets/Instagram.svg" class="w-[25px]" alt="Instagram">
+        </div>
+    </footer>
+    <script>
+        // Simple JavaScript to handle tab switching (optional, for basic front-end interaction)
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const purchaseContent = document.getElementById('purchase-content');
 
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active styles from all buttons
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('text-(--maroon-color)', 'border-(--maroon-color)');
+                    btn.classList.add('text-gray-500', 'border-transparent');
+                });
 
+                // Add active styles to the clicked button
+                button.classList.add('text-(--maroon-color)', 'border-(--maroon-color)');
+                button.classList.remove('text-gray-500', 'border-transparent');
+
+                // In a real application, you would load different content here
+                // For this example, we'll just show a placeholder message for other tabs
+                const tabText = button.textContent.split(' ')[0]; // e.g., "To" or "Completed"
+                
+                let contentHTML = '';
+
+                if (tabText === 'To') {
+                     contentHTML = `
+                        <div class="p-6 text-center text-gray-500 bg-gray-50 rounded-lg">
+                            Displaying orders **${tabText} Pay**. This content will be dynamically loaded from your server.
+                        </div>
+                        `;
+                } else if (tabText === 'Completed') {
+                     contentHTML = `
+                        <div class="p-6 text-center text-gray-500 bg-gray-50 rounded-lg">
+                            Displaying **Completed** orders. This content will be dynamically loaded from your server.
+                        </div>
+                    `;
+                } else if (tabText === 'Cancelled') {
+                     contentHTML = `
+                        <div class="p-6 text-center text-gray-500 bg-gray-50 rounded-lg">
+                            Displaying **Cancelled** orders. This content will be dynamically loaded from your server.
+                        </div>
+                    `;
+                }
+                
+                // Simplified content update (you should replace this with a real fetch/render logic)
+                purchaseContent.innerHTML = contentHTML; 
+            });
+        });
+
+        // Set the initial active tab content based on the first button (To Pay)
+        document.querySelector('.tab-button').click();
+    </script>
 </body>
 </html>
