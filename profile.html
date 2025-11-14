@@ -27,6 +27,12 @@
                     </svg>
                 </li>
                 <li>
+                    <a href="cart.html" class="flex items-center text-(--maroon-color) hover:text-opacity-80 transition duration-150 relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                        <span class="absolute -top-2 -right-3 inline-flex items-center justify-center px-2 py-0.5 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">3</span>
+                    </a>
+                </li>
+                <li>
                     <a href="login.html" class="text-white rounded-sm border py-2 px-10 flex gap-[7px] bg-(--maroon-color) items-center justify-center fill-white ease-out duration-300 hover:text-(--maroon-color) hover:bg-white hover:fill-(--maroon-color)">
                         <svg viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg" class=" w-4.5">
                             <mask id="mask0_134_630" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="7" width="11" height="6">
@@ -57,7 +63,12 @@
             
             <div class="w-1/4 max-w-[300px] flex flex-col gap-6">
                 <div class="flex items-center gap-3 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
-                    <img src="/assets/img/ice-panda.jpg" alt="User's Profile Picture" class="w-14 h-14 rounded-full object-cover border-2 border-(--maroon-color)">
+                    <div class="relative group">
+                         <img src="/assets/img/ice-panda.jpg" alt="User's Profile Picture" class="w-14 h-14 rounded-full object-cover border-2 border-(--maroon-color)">
+                        <button id="open-edit-image-modal" class="absolute inset-0 w-full h-full rounded-full bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 text-white cursor-pointer">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="currentColor"><path d="M18 4h-2.5l-.5-1H9.5l-.5 1H6c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H6V6h3.28l.72-1h4l.72 1H18v14zm-6-4c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z"/></svg>
+                        </button>
+                    </div>
                     <div class="flex flex-col">
                         <h2 class="text-lg font-semibold text-gray-800">John Sackman</h2>
                         <p class="text-sm text-gray-500">Customer</p>
@@ -65,23 +76,26 @@
                 </div>
 
                 <div class="flex flex-col gap-1">
-                    <a href="#personal-info" class="text-lg font-medium py-3 px-4 rounded-lg text-white bg-(--maroon-color) hover:bg-opacity-90 transition duration-150 flex items-center gap-2">
+                    <button data-section="personal-info" class="nav-link text-lg font-medium py-3 px-4 rounded-lg text-white bg-(--maroon-color) hover:bg-opacity-90 transition duration-150 flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
                         Personal Info
-                    </a>
-                    <a href="#my-purchases" class="text-lg font-medium py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 transition duration-150 flex items-center gap-2">
+                    </button>
+                    <button data-section="my-purchases" class="nav-link text-lg font-medium py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 transition duration-150 flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-4 0c0-1.1-.9-2-2-2s-2 .9-2 2h4zm-2 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
                         My Purchases
-                    </a>
-                </div>
+                    </button>
+                    <button data-section="my-cart" class="nav-link text-lg font-medium py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 transition duration-150 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.59-.25.9 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25 0-.04.02-.08.05-.12L8.58 13h7.43c.47 0 .8.26.97.64l3.12 6.18c.25.46.12 1.05-.33 1.3.45.25.12-.34.37-.8.5-.94.7-2.02.66-3.14V7c0-.55-.45-1-1-1H6.58l-.7-1.42c-.28-.56-.84-.98-1.5-.98H4.28L3.29 2H1zm18 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                        My Cart (3)
+                    </button>
+                    </div>
             </div>
 
             <div class="w-3/4 flex flex-col gap-10">
-                
-                <section id="personal-info" class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+                <section id="personal-info-content" class="profile-content bg-white p-8 rounded-lg shadow-lg border border-gray-100">
                     <div class="w-full flex justify-between items-center mb-6">
                         <h2 class="text-3xl font-semibold text-(--maroon-color)">Personal Information</h2>
-                        <button class="text-white text-[16px] px-5 py-[10px] flex items-center gap-2 rounded-[10px] bg-[rgb(2,117,216)] hover:bg-[rgb(0,99,184)] transition duration-150">
+                        <button id="open-edit-profile-modal" class="text-white text-[16px] px-5 py-[10px] flex items-center gap-2 rounded-[10px] bg-[rgb(2,117,216)] hover:bg-[rgb(0,99,184)] transition duration-150">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
                             </svg>
@@ -113,7 +127,7 @@
                     </div>
                 </section>
                 
-                <section id="my-purchases" class="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+                <section id="my-purchases-content" class="profile-content bg-white p-8 rounded-lg shadow-lg border border-gray-100 hidden">
                     <h2 class="text-3xl font-semibold text-(--maroon-color) mb-6">My Purchases</h2>
                     
                     <div class="flex border-b border-gray-200 mb-6">
@@ -125,40 +139,81 @@
                     </div>
 
                     <div id="purchase-content" class="flex flex-col gap-4">
-                        <div class="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition duration-200">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-sm font-semibold text-red-600">STATUS: TO PAY</span>
-                                <span class="text-sm text-gray-500">Order ID: #BHU98765</span>
-                            </div>
-                            <div class="flex gap-4 items-center border-t pt-3">
-                                <img src="/assets/img/example-cake.jpg" alt="Product Image" class="w-16 h-16 object-cover rounded">
+                        </div>
+                </section>
+
+                <section id="my-cart-content" class="profile-content bg-white p-8 rounded-lg shadow-lg border border-gray-100 hidden">
+                    <h2 class="text-3xl font-semibold text-(--maroon-color) mb-6">Shopping Cart (3 Items)</h2>
+                    
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <div class="flex-1 flex flex-col gap-4">
+                            <div class="flex items-center border border-gray-100 p-4 rounded-lg shadow-sm">
+                                <img src="/assets/img/example-cake.jpg" alt="Red Velvet Cake" class="w-20 h-20 object-cover rounded mr-4">
                                 <div class="flex-1">
-                                    <h3 class="font-medium">Red Velvet Cake - 6 inch</h3>
-                                    <p class="text-sm text-gray-500">Quantity: 1</p>
+                                    <h3 class="font-semibold text-lg text-gray-800">Red Velvet Cake - 6 inch</h3>
+                                    <p class="text-sm text-gray-500">₱ 1,250.00 each</p>
                                 </div>
-                                <div class="text-right">
-                                    <p class="text-lg font-bold text-(--maroon-color)">₱ 1,250.00</p>
-                                    <button class="mt-1 text-sm text-white bg-green-500 px-4 py-1 rounded hover:bg-green-600">Pay Now</button>
+                                <div class="flex items-center gap-2 mr-4">
+                                    <button class="text-gray-500 hover:text-(--maroon-color)">-</button>
+                                    <input type="number" value="1" min="1" class="w-12 text-center border rounded py-1 px-2">
+                                    <button class="text-gray-500 hover:text-(--maroon-color)">+</button>
                                 </div>
+                                <p class="font-bold text-gray-800 w-20 text-right">₱ 1,250.00</p>
+                                <button class="ml-4 text-red-500 hover:text-red-700 transition duration-150">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4h-3.5z"/></svg>
+                                </button>
+                            </div>
+                            <div class="flex items-center border border-gray-100 p-4 rounded-lg shadow-sm">
+                                <img src="/assets/img/example-brownies.jpg" alt="Chocolate Brownies" class="w-20 h-20 object-cover rounded mr-4">
+                                <div class="flex-1">
+                                    <h3 class="font-semibold text-lg text-gray-800">Decadent Chocolate Brownies</h3>
+                                    <p class="text-sm text-gray-500">₱ 300.00 per box</p>
+                                </div>
+                                <div class="flex items-center gap-2 mr-4">
+                                    <button class="text-gray-500 hover:text-(--maroon-color)">-</button>
+                                    <input type="number" value="2" min="1" class="w-12 text-center border rounded py-1 px-2">
+                                    <button class="text-gray-500 hover:text-(--maroon-color)">+</button>
+                                </div>
+                                <p class="font-bold text-gray-800 w-20 text-right">₱ 600.00</p>
+                                <button class="ml-4 text-red-500 hover:text-red-700 transition duration-150">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4h-3.5z"/></svg>
+                                </button>
+                            </div>
+                             <div class="flex items-center border border-gray-100 p-4 rounded-lg shadow-sm">
+                                <img src="/assets/img/example-cupcakes.jpg" alt="Vanilla Cupcakes" class="w-20 h-20 object-cover rounded mr-4">
+                                <div class="flex-1">
+                                    <h3 class="font-semibold text-lg text-gray-800">Vanilla Cupcakes - Dozen</h3>
+                                    <p class="text-sm text-gray-500">₱ 480.00 per dozen</p>
+                                </div>
+                                <div class="flex items-center gap-2 mr-4">
+                                    <button class="text-gray-500 hover:text-(--maroon-color)">-</button>
+                                    <input type="number" value="1" min="1" class="w-12 text-center border rounded py-1 px-2">
+                                    <button class="text-gray-500 hover:text-(--maroon-color)">+</button>
+                                </div>
+                                <p class="font-bold text-gray-800 w-20 text-right">₱ 480.00</p>
+                                <button class="ml-4 text-red-500 hover:text-red-700 transition duration-150">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4h-3.5z"/></svg>
+                                </button>
                             </div>
                         </div>
 
-                         <div class="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition duration-200">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-sm font-semibold text-orange-600">STATUS: TO SHIP</span>
-                                <span class="text-sm text-gray-500">Order ID: #BHU98764</span>
+                        <div class="w-full lg:w-[350px] bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 self-start">
+                            <h3 class="text-2xl font-semibold mb-4 text-(--maroon-color)">Order Summary</h3>
+                            <div class="flex justify-between text-lg mb-2">
+                                <span>Subtotal (3 items)</span>
+                                <span>₱ 2,330.00</span>
                             </div>
-                            <div class="flex gap-4 items-center border-t pt-3">
-                                <img src="/assets/img/example-brownies.jpg" alt="Product Image" class="w-16 h-16 object-cover rounded">
-                                <div class="flex-1">
-                                    <h3 class="font-medium">Decadent Chocolate Brownies</h3>
-                                    <p class="text-sm text-gray-500">Quantity: 2 boxes</p>
-                                </div>
-                                <div class="text-right">
-                                    <p class="text-lg font-bold text-(--maroon-color)">₱ 600.00</p>
-                                    <span class="mt-1 text-xs text-gray-400">Packaging in progress</span>
-                                </div>
+                            <div class="flex justify-between text-lg mb-4 pb-4 border-b">
+                                <span>Shipping Fee</span>
+                                <span>₱ 150.00</span>
                             </div>
+                            <div class="flex justify-between text-2xl font-bold text-(--maroon-color) mb-6">
+                                <span>Total:</span>
+                                <span>₱ 2,480.00</span>
+                            </div>
+                            <button class="w-full py-3 bg-green-600 text-white font-semibold text-xl rounded-lg hover:bg-green-700 transition duration-150">
+                                Proceed to Checkout
+                            </button>
                         </div>
                     </div>
                 </section>
@@ -168,6 +223,71 @@
 
     </main>
     
+    <div id="edit-profile-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-lg shadow-2xl w-full max-w-2xl transform transition-all duration-300 scale-100 opacity-100">
+            <div class="flex justify-between items-center mb-6 border-b pb-4">
+                <h2 class="text-3xl font-bold text-(--maroon-color)">Edit Personal Information</h2>
+                <button id="close-edit-profile-modal" class="text-gray-500 hover:text-red-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                </button>
+            </div>
+            <form class="grid grid-cols-2 gap-x-8 gap-y-6">
+                <div>
+                    <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                    <input type="text" id="fullName" value="John Sackman" class="w-full border border-gray-300 p-3 rounded-lg focus:border-(--maroon-color) outline-none">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                    <input type="email" id="email" value="john.sackman@example.com" class="w-full border border-gray-300 p-3 rounded-lg focus:border-(--maroon-color) outline-none">
+                </div>
+                <div>
+                    <label for="contact" class="block text-sm font-medium text-gray-700 mb-1">Contact Number</label>
+                    <input type="tel" id="contact" value="+63 917 123 4567" class="w-full border border-gray-300 p-3 rounded-lg focus:border-(--maroon-color) outline-none">
+                </div>
+                <div>
+                    <label for="dob" class="block text-sm font-medium text-gray-700 mb-1">Date of Birth</label>
+                    <input type="date" id="dob" value="1990-01-01" class="w-full border border-gray-300 p-3 rounded-lg focus:border-(--maroon-color) outline-none">
+                </div>
+                <div class="col-span-2">
+                    <label for="shippingAddress" class="block text-sm font-medium text-gray-700 mb-1">Shipping Address</label>
+                    <textarea id="shippingAddress" rows="3" class="w-full border border-gray-300 p-3 rounded-lg focus:border-(--maroon-color) outline-none resize-none">9998 Hayes Isle, Mantefurt 03581</textarea>
+                </div>
+                <div class="col-span-2 flex justify-end mt-4">
+                    <button type="submit" class="px-8 py-3 bg-(--maroon-color) text-white font-semibold rounded-lg hover:bg-opacity-90 transition duration-150">
+                        Save Changes
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="edit-image-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-lg shadow-2xl w-full max-w-md transform transition-all duration-300 scale-100 opacity-100">
+            <div class="flex justify-between items-center mb-6 border-b pb-4">
+                <h2 class="text-2xl font-bold text-(--maroon-color)">Change Profile Picture</h2>
+                <button id="close-edit-image-modal" class="text-gray-500 hover:text-red-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                </button>
+            </div>
+            <div class="flex flex-col items-center gap-4">
+                <img src="/assets/img/ice-panda.jpg" alt="Current Profile Picture" class="w-32 h-32 rounded-full object-cover border-4 border-gray-200">
+                <p class="text-sm text-gray-500">Upload a new image (JPG, PNG, max 5MB)</p>
+                <input type="file" accept="image/*" class="block w-full text-sm text-gray-500
+                    file:mr-4 file:py-2 file:px-4
+                    file:rounded-full file:border-0
+                    file:text-sm file:font-semibold
+                    file:bg-(--maroon-color) file:text-white
+                    hover:file:bg-opacity-80 transition duration-150"
+                />
+            </div>
+            <div class="flex justify-end mt-6">
+                <button class="px-6 py-2 bg-(--maroon-color) text-white font-semibold rounded-lg hover:bg-opacity-90 transition duration-150">
+                    Save Picture
+                </button>
+            </div>
+        </div>
+    </div>
+
     <footer class="w-full h-[220px] bg-(--bg-color) flex px-[50px] items-center py-[50px] mt-auto">
         <div class="w-full h-full flex flex-col gap-5 justify-end">
             <h1 class="text-[30px] font-bold text-(--maroon-color)">Visit Us</h1>
@@ -180,56 +300,134 @@
             <img src="assets/Instagram.svg" class="w-[25px]" alt="Instagram">
         </div>
     </footer>
+
     <script>
-        // Simple JavaScript to handle tab switching (optional, for basic front-end interaction)
-        const tabButtons = document.querySelectorAll('.tab-button');
-        const purchaseContent = document.getElementById('purchase-content');
+        // --- Profile Content Switching ---
+        const navLinks = document.querySelectorAll('.nav-link');
+        const profileSections = document.querySelectorAll('.profile-content');
 
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active styles from all buttons
-                tabButtons.forEach(btn => {
-                    btn.classList.remove('text-(--maroon-color)', 'border-(--maroon-color)');
-                    btn.classList.add('text-gray-500', 'border-transparent');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const targetId = link.getAttribute('data-section') + '-content';
+
+                // Update active navigation link styles
+                navLinks.forEach(nav => {
+                    nav.classList.remove('bg-(--maroon-color)', 'text-white');
+                    nav.classList.add('text-gray-700', 'hover:bg-gray-100');
                 });
+                link.classList.add('bg-(--maroon-color)', 'text-white');
+                link.classList.remove('text-gray-700', 'hover:bg-gray-100');
 
-                // Add active styles to the clicked button
-                button.classList.add('text-(--maroon-color)', 'border-(--maroon-color)');
-                button.classList.remove('text-gray-500', 'border-transparent');
+                // Switch content visibility
+                profileSections.forEach(section => {
+                    section.classList.add('hidden');
+                });
+                document.getElementById(targetId).classList.remove('hidden');
 
-                // In a real application, you would load different content here
-                // For this example, we'll just show a placeholder message for other tabs
-                const tabText = button.textContent.split(' ')[0]; // e.g., "To" or "Completed"
-                
-                let contentHTML = '';
-
-                if (tabText === 'To') {
-                     contentHTML = `
-                        <div class="p-6 text-center text-gray-500 bg-gray-50 rounded-lg">
-                            Displaying orders **${tabText} Pay**. This content will be dynamically loaded from your server.
-                        </div>
-                        `;
-                } else if (tabText === 'Completed') {
-                     contentHTML = `
-                        <div class="p-6 text-center text-gray-500 bg-gray-50 rounded-lg">
-                            Displaying **Completed** orders. This content will be dynamically loaded from your server.
-                        </div>
-                    `;
-                } else if (tabText === 'Cancelled') {
-                     contentHTML = `
-                        <div class="p-6 text-center text-gray-500 bg-gray-50 rounded-lg">
-                            Displaying **Cancelled** orders. This content will be dynamically loaded from your server.
-                        </div>
-                    `;
+                // For the "My Purchases" tab, initialize the inner tab content
+                if (targetId === 'my-purchases-content') {
+                    // Simulate clicking the first tab button ("To Pay")
+                    document.querySelector('#my-purchases-content .tab-button').click();
                 }
-                
-                // Simplified content update (you should replace this with a real fetch/render logic)
-                purchaseContent.innerHTML = contentHTML; 
             });
         });
 
-        // Set the initial active tab content based on the first button (To Pay)
-        document.querySelector('.tab-button').click();
+        // --- My Purchases Tabs Switching (Existing logic with minor cleanup) ---
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const purchaseContent = document.getElementById('purchase-content');
+
+        const updatePurchaseContent = (button) => {
+             // Remove active styles from all buttons
+            tabButtons.forEach(btn => {
+                btn.classList.remove('text-(--maroon-color)', 'border-(--maroon-color)');
+                btn.classList.add('text-gray-500', 'border-transparent');
+            });
+
+            // Add active styles to the clicked button
+            button.classList.add('text-(--maroon-color)', 'border-(--maroon-color)');
+            button.classList.remove('text-gray-500', 'border-transparent');
+
+            const tabText = button.textContent.split(' ')[0]; 
+            let contentHTML = '';
+
+            if (tabText === 'To') {
+                 contentHTML = `
+                    <div class="p-4 border border-gray-200 rounded-lg shadow-sm">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm font-semibold text-red-600">STATUS: TO PAY</span>
+                            <span class="text-sm text-gray-500">Order ID: #BHU98765</span>
+                        </div>
+                        <div class="flex gap-4 items-center border-t pt-3">
+                            <img src="/assets/img/example-cake.jpg" alt="Product Image" class="w-16 h-16 object-cover rounded">
+                            <div class="flex-1">
+                                <h3 class="font-medium">Red Velvet Cake - 6 inch</h3>
+                                <p class="text-sm text-gray-500">Quantity: 1</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-lg font-bold text-(--maroon-color)">₱ 1,250.00</p>
+                                <button class="mt-1 text-sm text-white bg-green-500 px-4 py-1 rounded hover:bg-green-600">Pay Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center text-gray-500 bg-gray-50 rounded-lg">
+                        Displaying remaining orders **${tabText} Pay/Ship/Receive**.
+                    </div>
+                `;
+            } else if (tabText === 'Completed') {
+                 contentHTML = `
+                    <div class="p-6 text-center text-gray-500 bg-gray-50 rounded-lg">
+                        Displaying **Completed** orders. This content will be dynamically loaded from your server.
+                    </div>
+                `;
+            } else if (tabText === 'Cancelled') {
+                 contentHTML = `
+                    <div class="p-6 text-center text-gray-500 bg-gray-50 rounded-lg">
+                        Displaying **Cancelled** orders. This content will be dynamically loaded from your server.
+                    </div>
+                `;
+            }
+            purchaseContent.innerHTML = contentHTML; 
+        };
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => updatePurchaseContent(button));
+        });
+
+        // --- Modal Handlers ---
+
+        const editProfileModal = document.getElementById('edit-profile-modal');
+        const openProfileModalBtn = document.getElementById('open-edit-profile-modal');
+        const closeProfileModalBtn = document.getElementById('close-edit-profile-modal');
+        
+        const editImageModal = document.getElementById('edit-image-modal');
+        const openImageModalBtn = document.getElementById('open-edit-image-modal');
+        const closeImageModalBtn = document.getElementById('close-edit-image-modal');
+
+        // Open Profile Modal
+        openProfileModalBtn.addEventListener('click', () => {
+            editProfileModal.classList.remove('hidden');
+        });
+
+        // Close Profile Modal
+        closeProfileModalBtn.addEventListener('click', () => {
+            editProfileModal.classList.add('hidden');
+        });
+
+        // Open Image Modal
+        openImageModalBtn.addEventListener('click', () => {
+            editImageModal.classList.remove('hidden');
+        });
+
+        // Close Image Modal
+        closeImageModalBtn.addEventListener('click', () => {
+            editImageModal.classList.add('hidden');
+        });
+
+
+        // --- Initial Load ---
+        // Manually set the initial state to 'Personal Info' on page load
+        document.querySelector('[data-section="personal-info"]').click();
+
     </script>
 </body>
 </html>
