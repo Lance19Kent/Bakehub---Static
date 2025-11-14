@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-amber-400: oklch(82.8% 0.189 84.429);
+    --color-green-700: oklch(52.7% 0.154 150.069);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -207,6 +208,9 @@
   .flex {
     display: flex;
   }
+  .inline {
+    display: inline;
+  }
   .table {
     display: table;
   }
@@ -346,6 +350,9 @@
   .gap-2\.5 {
     gap: calc(var(--spacing) * 2.5);
   }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
@@ -375,6 +382,12 @@
   }
   .gap-\[7px\] {
     gap: 7px;
+  }
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  .rounded-\[10px\] {
+    border-radius: 10px;
   }
   .rounded-\[14px\] {
     border-radius: 14px;
@@ -416,17 +429,44 @@
   .border-\[\#DBDFD0\] {
     border-color: #DBDFD0;
   }
+  .border-\[--bg-gray-color\] {
+    border-color: --bg-gray-color;
+  }
   .bg-\(--bg-color\) {
     background-color: var(--bg-color);
   }
   .bg-\(--maroon-color\) {
     background-color: var(--maroon-color);
   }
+  .bg-\[\#22bb33\] {
+    background-color: #22bb33;
+  }
+  .bg-\[\#0275d8\] {
+    background-color: #0275d8;
+  }
   .bg-\[\#FEF5FD\] {
     background-color: #FEF5FD;
   }
+  .bg-\[rgb\(2\,117\,216\)\] {
+    background-color: rgb(2,117,216);
+  }
+  .bg-\[rgb\(34\,187\,51\)\] {
+    background-color: rgb(34,187,51);
+  }
   .bg-\[rgb\(255\,250\,250\)\] {
     background-color: rgb(255,250,250);
+  }
+  .bg-\[rgba\(34\,187\,51\)\] {
+    background-color: rgba(34,187,51);
+  }
+  .bg-\[rgba\(34\,187\,51\,0\)\] {
+    background-color: rgba(34,187,51,0);
+  }
+  .bg-\[rgba\(34\,187\,51\,0\.2\)\] {
+    background-color: rgba(34,187,51,0.2);
+  }
+  .bg-\[rgba\(34\,187\,51\,0\.3\)\] {
+    background-color: rgba(34,187,51,0.3);
   }
   .bg-transparent {
     background-color: transparent;
@@ -452,6 +492,9 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
   .px-7 {
     padding-inline: calc(var(--spacing) * 7);
   }
@@ -472,6 +515,15 @@
   }
   .px-19 {
     padding-inline: calc(var(--spacing) * 19);
+  }
+  .px-\[10px\] {
+    padding-inline: 10px;
+  }
+  .px-\[20px\] {
+    padding-inline: 20px;
+  }
+  .px-\[30px\] {
+    padding-inline: 30px;
   }
   .px-\[50px\] {
     padding-inline: 50px;
@@ -494,6 +546,18 @@
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
   }
+  .py-\[10px\] {
+    padding-block: 10px;
+  }
+  .py-\[13px\] {
+    padding-block: 13px;
+  }
+  .py-\[15px\] {
+    padding-block: 15px;
+  }
+  .py-\[20px\] {
+    padding-block: 20px;
+  }
   .py-\[50px\] {
     padding-block: 50px;
   }
@@ -505,6 +569,9 @@
   }
   .pt-30 {
     padding-top: calc(var(--spacing) * 30);
+  }
+  .pt-\[10px\] {
+    padding-top: 10px;
   }
   .pt-\[100px\] {
     padding-top: 100px;
@@ -542,11 +609,20 @@
   .pl-2\.5 {
     padding-left: calc(var(--spacing) * 2.5);
   }
+  .pl-10 {
+    padding-left: calc(var(--spacing) * 10);
+  }
   .pl-\[250px\] {
     padding-left: 250px;
   }
   .text-center {
     text-align: center;
+  }
+  .text-\[3px\] {
+    font-size: 3px;
+  }
+  .text-\[6px\] {
+    font-size: 6px;
   }
   .text-\[12px\] {
     font-size: 12px;
@@ -566,17 +642,26 @@
   .text-\[20px\] {
     font-size: 20px;
   }
+  .text-\[22px\] {
+    font-size: 22px;
+  }
   .text-\[24px\] {
     font-size: 24px;
   }
   .text-\[30px\] {
     font-size: 30px;
   }
+  .text-\[36px\] {
+    font-size: 36px;
+  }
   .text-\[40px\] {
     font-size: 40px;
   }
   .text-\[44px\] {
     font-size: 44px;
+  }
+  .text-\[46px\] {
+    font-size: 46px;
   }
   .text-\[50px\] {
     font-size: 50px;
@@ -609,8 +694,17 @@
   .text-\(--maroon-color\) {
     color: var(--maroon-color);
   }
+  .text-\[1\] {
+    color: 1;
+  }
+  .text-\[116\] {
+    color: 116;
+  }
   .text-black {
     color: var(--color-black);
+  }
+  .text-green-700 {
+    color: var(--color-green-700);
   }
   .text-white {
     color: var(--color-white);

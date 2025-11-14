@@ -10,72 +10,75 @@
 </head>
 <body class="w-full min-h-screen">
 
-    <nav class="min-h-screen w-[250px] bg-(--bg-color) py-5 px-8 fixed">
-        <ul class="text-(--maroon-color) text-[16px] flex gap-10 flex-col font-medium">
-            <li class="flex items-center gap-2.5">
-                <img src="assets/bakehub-logo.svg" alt="Bakehub Logo" class="w-12">
-                <a href="index.html" class="text-(--maroon-color) font-bold text-[24px]">Bake Hub</a>
-            </li>
-            <li class="flex gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                </svg>
-
-                <span>Your Profile</span>
-            </li>
-            <li class="flex gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
-                </svg>
-                <span>Edit Profile</span>
-            </li>
-            <li class="flex gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                </svg>
-
-
-                <span>Check Cart</span>
-            </li>
-            <li class="flex gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
-                </svg>
-                <span>Our History</span>
-            </li>
-            <li class="flex gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
-                </svg>
-
-
-                <span>Logout</span>
-            </li>
-        </ul>
-    </nav>
- 
-    <div class="pl-[250px]">
-        <main class="flex-1 w-full min-h-screen px-10 py-6 flex gap-20 flex-col">
-            <ul class="flex justify-between w-full">
-                <li class="relative z-1 w-full">
-                    <input type="text" placeholder="Search" class="peer relative w-full max-w-[400px] border border-(--bg-gray-color)  outline-none py-2 focus:border-(--maroon-color) rounded-sm text-[14px] placeholder:text-[16px] pr-2.5 pl-2.5 placeholder:pl-6 placeholder:text-(--gray-color) text-black placeholder-shown:placeholder:opacity-100 focus:placeholder:opacity-0">
+    <!-- Header -->
+    <header class="w-full h-20 bg-white flex items-center justify-between px-[50px] fixed z-2">
+        <div class="w-full gap-2.5 flex items-center">
+            <img src="assets/bakehub-logo.svg" alt="Bakehub Logo" class="w-15">
+            <a href="index.html" class="text-(--maroon-color) font-bold text-[30px]">Bake Hub</a>
+        </div>
+        <div class="flex w-full justify-end whitespace-nowrap">
+            <ul class="w-full flex gap-12 text-[18px] items-center text-(--maroon-color)">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li class="relative z-1"><input type="text" placeholder="Search" class="peer relative w-[250px] border border-(--gray-color)  outline-none py-2 focus:border-(--maroon-color) rounded-sm text-[14px] placeholder:text-[16px] pr-2.5 pl-2.5 placeholder:pl-6 placeholder:text-(--gray-color) text-black placeholder-shown:placeholder:opacity-100 focus:placeholder:opacity-0">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-[7px] left-2.5 z-0 peer-placeholder-shown:opacity-100 peer-focus:opacity-0 opacity-0">
-                        <path d="M12.5 14H11.71L11.43 13.73C12.444 12.5541 13.0012 11.0527 13 9.5C13 8.21442 12.6188 6.95772 11.9046 5.8888C11.1903 4.81988 10.1752 3.98676 8.98744 3.49479C7.79973 3.00282 6.49279 2.87409 5.23192 3.1249C3.97104 3.3757 2.81285 3.99477 1.90381 4.90381C0.994767 5.81285 0.375703 6.97104 0.124899 8.23192C-0.125905 9.49279 0.00281635 10.7997 0.494786 11.9874C0.986756 13.1752 1.81988 14.1903 2.8888 14.9046C3.95772 15.6188 5.21442 16 6.5 16C8.11 16 9.59 15.41 10.73 14.43L11 14.71V15.5L16 20.49L17.49 19L12.5 14ZM6.5 14C4.01 14 2 11.99 2 9.5C2 7.01 4.01 5 6.5 5C8.99 5 11 7.01 11 9.5C11 11.99 8.99 14 6.5 14Z" fill="#D1D1D1" />
-                    </svg>
+                    <path d="M12.5 14H11.71L11.43 13.73C12.444 12.5541 13.0012 11.0527 13 9.5C13 8.21442 12.6188 6.95772 11.9046 5.8888C11.1903 4.81988 10.1752 3.98676 8.98744 3.49479C7.79973 3.00282 6.49279 2.87409 5.23192 3.1249C3.97104 3.3757 2.81285 3.99477 1.90381 4.90381C0.994767 5.81285 0.375703 6.97104 0.124899 8.23192C-0.125905 9.49279 0.00281635 10.7997 0.494786 11.9874C0.986756 13.1752 1.81988 14.1903 2.8888 14.9046C3.95772 15.6188 5.21442 16 6.5 16C8.11 16 9.59 15.41 10.73 14.43L11 14.71V15.5L16 20.49L17.49 19L12.5 14ZM6.5 14C4.01 14 2 11.99 2 9.5C2 7.01 4.01 5 6.5 5C8.99 5 11 7.01 11 9.5C11 11.99 8.99 14 6.5 14Z" fill="#D1D1D1"/>
+                </svg>
                 </li>
                 <li>
-                    <div class="cursor-pointer" id="profile-menu-toggle">
-                            <img src="/assets/img/ice-panda.jpg" alt="User Profile" class="w-12 rounded-[50px]">
-                    </div>
+                    <a href="login.html" class="text-white rounded-sm border py-2 px-10 flex gap-[7px]  bg-(--maroon-color) items-center justify-center fill-white ease-out duration-300 hover:text-(--maroon-color) hover:bg-white hover:fill-(--maroon-color)">
+                        <svg viewBox="0 0 14 13"  xmlns="http://www.w3.org/2000/svg" class=" w-4.5">
+                            <mask id="mask0_134_630" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="7" width="11" height="6">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.97131H10.1225V12.7044H0V7.97131Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_134_630)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.06117 8.97133C3.2085 8.97133 0.999837 9.20933 0.999837 10.346C0.999837 11.2473 2.3665 11.7047 5.06117 11.7047C7.75584 11.7047 9.12251 11.2427 9.12251 10.3327C9.12251 9.42933 7.75584 8.97133 5.06117 8.97133ZM5.06133 12.7046C3.67733 12.7046 0 12.7046 0 10.346C0 7.97131 3.80933 7.97131 5.06133 7.97131C7.234 7.97131 10.1227 8.21598 10.1227 10.3326C10.1227 12.7046 6.31333 12.7046 5.06133 12.7046Z" />
+                            </g>
+                            <mask id="mask1_134_630" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="7" width="4" height="4">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5635 7.65564H13.3193V10.974H10.5635V7.65564Z" />
+                            </mask>
+                            <g mask="url(#mask1_134_630)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9303 10.974C11.7283 10.974 11.5383 10.8507 11.463 10.6513C11.365 10.3933 11.495 10.104 11.753 10.0067C12.3197 9.79199 12.3197 9.52999 12.3197 9.41799C12.3197 9.03999 11.8723 8.78133 10.9903 8.64999C10.717 8.60866 10.5283 8.35399 10.569 8.08133C10.6103 7.80799 10.8697 7.62466 11.1377 7.65999C12.9417 7.92999 13.3197 8.76533 13.3197 9.41799C13.3197 9.90399 13.1097 10.562 12.1077 10.9413C12.0497 10.9633 11.9897 10.974 11.9303 10.974Z"/>
+                            </g>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.65478 6.08793C9.40944 6.08793 9.19544 5.90726 9.16011 5.65726C9.12211 5.38393 9.31211 5.13059 9.58544 5.09259C10.4174 4.97593 11.0454 4.25393 11.0468 3.41259C11.0468 2.57659 10.4481 1.87126 9.62478 1.73659C9.35211 1.69126 9.16744 1.43459 9.21211 1.16193C9.25678 0.889259 9.51478 0.705925 9.78611 0.749259C11.0961 0.963925 12.0468 2.08459 12.0468 3.41326C12.0441 4.74993 11.0461 5.89793 9.72478 6.08326C9.70144 6.08659 9.67811 6.08793 9.65478 6.08793Z" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.06088 1.00002C3.72421 1.00002 2.63688 2.08735 2.63688 3.42335C2.63688 4.75935 3.72421 5.84669 5.06088 5.84669H5.08155C5.72422 5.84402 6.32955 5.59135 6.78355 5.13335C7.23821 4.67669 7.48688 4.06935 7.48421 3.42535C7.48421 2.08735 6.39688 1.00002 5.06088 1.00002ZM5.06072 6.84667C3.17272 6.84667 1.63672 5.31067 1.63672 3.42333C1.63672 1.536 3.17272 0 5.06072 0C6.94805 0 8.48405 1.536 8.48405 3.42333C8.48805 4.33267 8.13539 5.19133 7.49272 5.838C6.85139 6.48533 5.99472 6.84333 5.08339 6.84667H5.06072Z" />
+                        </svg>
+                        <span>Sign In</span>
+                    </a>  
                 </li>
             </ul>
+        </div>
+    </header>
+    <!--/ Header -->
 
-            <div class="border w-full h-[600px] rounded-sm border-(--bg-gray-color)">
-                <div class="w-full flex items-center pt-10 flex-col gap-5">
-                    <img src="/assets/img/ice-panda.jpg" alt="User's Profile Picture" class="w-full max-w-[250px] rounded-[50%]">
-                    <h1 class="text-[44px] font-medium">John Sackman</h1>
+        <main class="flex-1 w-full min-h-screen px-10 py-6 flex gap-20 flex-col pt-[100px]">
+
+            <form action="" class="w-full flex flex-col gap-3">
+                <div class="w-full flex justify-between items-end">
+                    <h1 class="text-[46px] font-semibold">User Profile</h1>
+                    <div  class="text-white text-[16px] px-5 py-[13px] flex items-center gap-2.5 rounded-[10px] bg-[rgb(2,117,216)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                        </svg>
+
+                        <button>Edit Profile </button>
+                    </div>
                 </div>
-            </div>
+                <div class="border w-full h-[600px] flex flex-col gap-10 rounded-sm border-(--bg-gray-color) pl-10">
+                    <div class="w-full flex pt-10 items-center gap-5">
+                        <img src="/assets/img/ice-panda.jpg" alt="User's Profile Picture" class="w-full max-w-[250px] rounded-[50%]">
+                        <div class="flex flex-col gap-5">
+                            <h1 class="text-[44px] font-medium">John Sackman</h1>
+                            <div class="w-full">
+                                <div class="text-green-700 text-[22px] px-[30px] py-[20px] inline rounded-[10px] bg-[rgba(34,187,51,0.3)]">Customer</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="border border-(--bg-gray-color)">
+                </div>
+            </form>
+
         </main>
     
         <!-- Footer -->
@@ -92,7 +95,6 @@
             </div>
         </footer>
         <!--/ Footer  -->
-    </div>
 
 
 </body>
