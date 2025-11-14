@@ -3,15 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/src/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Define custom color variables for consistency across the site */
+        :root {
+            --maroon-color: #800000;
+            --gray-color: #D1D1D1;
+            --bg-color: #f7f7f7;
+            --accent-pink: #fef5fd; /* Used in the original code */
+        }
+        /* Custom Tailwind class definitions using CSS variables */
+        .text-\(--maroon-color\) { color: var(--maroon-color); }
+        .bg-\(--maroon-color\) { background-color: var(--maroon-color); }
+        .border-\(--maroon-color\) { border-color: var(--maroon-color); }
+        .border-\(--gray-color\) { border-color: var(--gray-color); }
+        .placeholder\:text-\(--gray-color\) { color: var(--gray-color); }
+        .hover\:text-\(--maroon-color\):hover { color: var(--maroon-color); }
+        .hover\:bg-\(--maroon-color\):hover { background-color: var(--maroon-color); }
+        .fill-\(--maroon-color\) { fill: var(--maroon-color); }
+        .bg-\(--bg-color\) { background-color: var(--bg-color); }
+        
+        /* Ensure responsive font sizing and box-sizing */
+        body { font-family: 'Poppins', sans-serif; background-color: #ffffff; }
+
+        /* Style for quantity input */
+        .quantity-control input {
+            -moz-appearance: textfield;
+        }
+        .quantity-control input::-webkit-outer-spin-button,
+        .quantity-control input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Responsive padding adjustments */
+        @media (max-width: 1024px) {
+            .px-\[50px\] { padding-left: 20px; padding-right: 20px; }
+            .px-17 { padding-left: 1rem; padding-right: 1rem; }
+            .lg\:sticky { position: static; }
+        }
+    </style>
 </head>
-<body class="w-full min-h-screen">
+<body class="w-full min-h-screen flex flex-col">
     
     <!-- Header -->
-    <header class="w-full h-20 bg-white flex items-center justify-between px-[50px] fixed z-2">
+    <header class="w-full h-20 bg-white flex items-center justify-between px-[50px] fixed z-20 shadow-md">
         <div class="w-full gap-2.5 flex items-center">
             <img src="assets/bakehub-logo.svg" alt="Bakehub Logo" class="w-15">
             <a href="index.html" class="text-(--maroon-color) font-bold text-[30px]">Bake Hub</a>
@@ -21,14 +60,20 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="aboutUs.html">About Us</a></li>
-                <li class="relative z-1"><input type="text" placeholder="Search" class="peer relative w-[250px] border border-(--gray-color)  outline-none py-2 focus:border-(--maroon-color) rounded-sm text-[14px] placeholder:text-[16px] pr-2.5 pl-2.5 placeholder:pl-6 placeholder:text-(--gray-color) text-black placeholder-shown:placeholder:opacity-100 focus:placeholder:opacity-0">
+                <li class="relative z-1"><input type="text" placeholder="Search" class="peer relative w-[250px] border border-(--gray-color) outline-none py-2 focus:border-(--maroon-color) rounded-sm text-[14px] placeholder:text-[16px] pr-2.5 pl-2.5 placeholder:pl-6 placeholder:text-(--gray-color) text-black placeholder-shown:placeholder:opacity-100 focus:placeholder:opacity-0">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-[7px] left-2.5 z-0 peer-placeholder-shown:opacity-100 peer-focus:opacity-0 opacity-0">
                     <path d="M12.5 14H11.71L11.43 13.73C12.444 12.5541 13.0012 11.0527 13 9.5C13 8.21442 12.6188 6.95772 11.9046 5.8888C11.1903 4.81988 10.1752 3.98676 8.98744 3.49479C7.79973 3.00282 6.49279 2.87409 5.23192 3.1249C3.97104 3.3757 2.81285 3.99477 1.90381 4.90381C0.994767 5.81285 0.375703 6.97104 0.124899 8.23192C-0.125905 9.49279 0.00281635 10.7997 0.494786 11.9874C0.986756 13.1752 1.81988 14.1903 2.8888 14.9046C3.95772 15.6188 5.21442 16 6.5 16C8.11 16 9.59 15.41 10.73 14.43L11 14.71V15.5L16 20.49L17.49 19L12.5 14ZM6.5 14C4.01 14 2 11.99 2 9.5C2 7.01 4.01 5 6.5 5C8.99 5 11 7.01 11 9.5C11 11.99 8.99 14 6.5 14Z" fill="#D1D1D1"/>
-                </svg>
+                    </svg>
                 </li>
                 <li>
-                    <a href="login.html" class="text-white rounded-sm border py-2 px-10 flex gap-[7px]  bg-(--maroon-color) items-center justify-center fill-white ease-out duration-300 hover:text-(--maroon-color) hover:bg-white hover:fill-(--maroon-color)">
-                        <svg viewBox="0 0 14 13"  xmlns="http://www.w3.org/2000/svg" class=" w-4.5">
+                    <a href="cart.html" class="flex items-center text-(--maroon-color) hover:text-opacity-80 transition duration-150 relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                        <span class="absolute -top-2 -right-3 inline-flex items-center justify-center px-2 py-0.5 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html" class="text-white rounded-sm border py-2 px-10 flex gap-[7px] bg-(--maroon-color) items-center justify-center fill-white ease-out duration-300 hover:text-(--maroon-color) hover:bg-white hover:fill-(--maroon-color)">
+                        <svg viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg" class=" w-4.5">
                             <mask id="mask0_134_630" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="7" width="11" height="6">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.97131H10.1225V12.7044H0V7.97131Z" fill="white"/>
                             </mask>
@@ -45,73 +90,340 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M5.06088 1.00002C3.72421 1.00002 2.63688 2.08735 2.63688 3.42335C2.63688 4.75935 3.72421 5.84669 5.06088 5.84669H5.08155C5.72422 5.84402 6.32955 5.59135 6.78355 5.13335C7.23821 4.67669 7.48688 4.06935 7.48421 3.42535C7.48421 2.08735 6.39688 1.00002 5.06088 1.00002ZM5.06072 6.84667C3.17272 6.84667 1.63672 5.31067 1.63672 3.42333C1.63672 1.536 3.17272 0 5.06072 0C6.94805 0 8.48405 1.536 8.48405 3.42333C8.48805 4.33267 8.13539 5.19133 7.49272 5.838C6.85139 6.48533 5.99472 6.84333 5.08339 6.84667H5.06072Z" />
                         </svg>
                         <span>Sign In</span>
-                    </a>  
+                    </a> 
                 </li>
             </ul>
         </div>
     </header>
     <!--/ Header -->
 
-    <main class="flex-1 w-full min-h-screen pt-[120px] px-17 pb-[60px]">
-        <div class="flex flex-col w-fit gap-5">
-            <div class="flex gap-5.5">
-                <div class="py-2.5 px-7 bg-[#FEF5FD] w-fit rounded-[50px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke ="var(--gray-color)"  class="w-15">
+    <main class="flex-1 w-full pt-[120px] px-4 lg:px-17 pb-[60px] max-w-7xl mx-auto">
+        
+        <!-- Cart Header -->
+        <div class="flex flex-col gap-3 mb-8">
+            <div class="flex items-center gap-4">
+                <div class="p-3 bg-[var(--accent-pink)] w-fit rounded-full shadow-inner">
+                    <!-- Shopping Cart Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--maroon-color)" class="w-8 h-8">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
                     </svg>
                 </div>
-                <h1 class="text-(--maroon-color) text-[50px] font-bold">My Cart</h1>
+                <h1 class="text-(--maroon-color) text-4xl lg:text-5xl font-bold">My Cart</h1>
             </div>
-            <p class="text-(--gray-color)">You have 3 item in your cart </p>
+            <p id="cart-count-message" class="text-gray-500 font-medium ml-4">You have 3 items in your cart.</p>
         </div>
-        <hr class="mt-10 border-(--gray-color)">
-        <div class="w-full border border-(--gray-color) mt-10 h-[500px] rounded-sm px-10 pt-5">
-            <div class="flex w-full justify-between text-(--maroon-color) font-semibold text-[16px]">
-                <div>
-                    <input type="checkbox" class="accent-(--maroon-color)">
-                    <label for="">Select All</label>
+        
+        <!-- Main Cart Grid: Two Columns (Cart Items & Summary) -->
+        <div class="flex flex-col lg:flex-row gap-8">
+            
+            <!-- Left Column: Cart Items List -->
+            <section id="cart-items-container" class="lg:w-3/5 flex flex-col gap-6">
+                <!-- Select All and Bulk Delete -->
+                <div class="flex justify-between items-center p-4 bg-gray-50 rounded-xl shadow-inner border border-gray-200">
+                    <label class="flex items-center text-lg font-semibold text-gray-700">
+                        <input type="checkbox" id="select-all" class="size-5 accent-(--maroon-color) mr-3 rounded">
+                        Select All (3)
+                    </label>
+                    <button class="text-sm font-semibold text-red-600 hover:text-red-800 transition duration-150 flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                        Remove Selected
+                    </button>
                 </div>
-                <p>Product</p>
-                <p>Price</p>
-                <p>Quantity</p>
-                <p>Total</p>
-                <p>Remove</p>
-            </div>
-            <div class="w-full px-10 bg-(--bg-color) flex justify-between">
-                <input type="checkbox" name="" id="">
-                <div class="flex flex-col items-center">
-                    <img src="/assets/img/landing-cake-pic.png" alt="" class="w-[100px]">
-                    <p>Sanrio Cake</p>
-                </div>
-                <p>₱5,000.00</p>
-                <div>
-                    1
-                </div>
-                <p>₱5,000.00</p>
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
-                    </svg>
 
+                <!-- CART ITEM 1: Sanrio Cake (Customized Item) -->
+                <div class="cart-item-card flex flex-col md:flex-row items-start md:items-center p-6 bg-white rounded-xl shadow-lg border border-gray-100" data-price="5000.00" data-quantity="1">
+                    <input type="checkbox" class="cart-item-checkbox size-5 accent-(--maroon-color) mr-6 mt-1 md:mt-0">
+                    
+                    <img src="https://placehold.co/100x100/f5a9b8/FFFFFF?text=Cake" onerror="this.onerror=null;this.src='https://placehold.co/100x100/f5a9b8/FFFFFF?text=Cake'" alt="Sanrio Cake" class="w-24 h-24 object-cover rounded-lg mr-6 flex-shrink-0">
+                    
+                    <div class="flex-1 min-w-0 pr-4 mt-4 md:mt-0">
+                        <h3 class="text-xl font-semibold text-gray-900">Sanrio Cake (Custom)</h3>
+                        <p class="text-sm text-gray-500 mb-2">Size: 8-inch, Flavor: Ube, Theme: Hello Kitty</p>
+                        <p class="text-lg font-medium text-(--maroon-color) item-price">₱ 5,000.00</p>
+                    </div>
+
+                    <div class="flex items-center gap-6 mt-4 md:mt-0">
+                        <!-- Quantity Control -->
+                        <div class="flex items-center border border-gray-300 rounded-lg quantity-control">
+                            <button class="quantity-btn p-2 text-gray-600 hover:bg-gray-100 rounded-l-lg font-bold" data-action="decrease">-</button>
+                            <input type="number" value="1" min="1" class="w-12 text-center border-x border-gray-300 py-1 text-lg font-medium item-quantity" readonly>
+                            <button class="quantity-btn p-2 text-gray-600 hover:bg-gray-100 rounded-r-lg font-bold" data-action="increase">+</button>
+                        </div>
+                        
+                        <!-- Total Price for Item -->
+                        <p class="text-xl font-bold text-gray-800 w-28 text-right item-total">₱ 5,000.00</p>
+
+                        <!-- Remove Button -->
+                        <button class="remove-item text-red-500 hover:text-red-700 transition duration-150 ml-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        </button>
+                    </div>
                 </div>
-            </div>
+
+                <!-- CART ITEM 2: Decadent Chocolate Brownies -->
+                <div class="cart-item-card flex flex-col md:flex-row items-start md:items-center p-6 bg-white rounded-xl shadow-lg border border-gray-100" data-price="300.00" data-quantity="2">
+                    <input type="checkbox" class="cart-item-checkbox size-5 accent-(--maroon-color) mr-6 mt-1 md:mt-0">
+                    
+                    <img src="https://placehold.co/100x100/502C1F/FFFFFF?text=Brownies" onerror="this.onerror=null;this.src='https://placehold.co/100x100/502C1F/FFFFFF?text=Brownies'" alt="Decadent Chocolate Brownies" class="w-24 h-24 object-cover rounded-lg mr-6 flex-shrink-0">
+                    
+                    <div class="flex-1 min-w-0 pr-4 mt-4 md:mt-0">
+                        <h3 class="text-xl font-semibold text-gray-900">Decadent Chocolate Brownies</h3>
+                        <p class="text-sm text-gray-500 mb-2">Box of 12, Classic flavor</p>
+                        <p class="text-lg font-medium text-(--maroon-color) item-price">₱ 300.00</p>
+                    </div>
+
+                    <div class="flex items-center gap-6 mt-4 md:mt-0">
+                        <!-- Quantity Control -->
+                        <div class="flex items-center border border-gray-300 rounded-lg quantity-control">
+                            <button class="quantity-btn p-2 text-gray-600 hover:bg-gray-100 rounded-l-lg font-bold" data-action="decrease">-</button>
+                            <input type="number" value="2" min="1" class="w-12 text-center border-x border-gray-300 py-1 text-lg font-medium item-quantity" readonly>
+                            <button class="quantity-btn p-2 text-gray-600 hover:bg-gray-100 rounded-r-lg font-bold" data-action="increase">+</button>
+                        </div>
+                        
+                        <!-- Total Price for Item -->
+                        <p class="text-xl font-bold text-gray-800 w-28 text-right item-total">₱ 600.00</p>
+
+                        <!-- Remove Button -->
+                        <button class="remove-item text-red-500 hover:text-red-700 transition duration-150 ml-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CART ITEM 3: Seasonal Pumpkin Pie -->
+                <div class="cart-item-card flex flex-col md:flex-row items-start md:items-center p-6 bg-white rounded-xl shadow-lg border border-gray-100" data-price="850.00" data-quantity="1">
+                    <input type="checkbox" class="cart-item-checkbox size-5 accent-(--maroon-color) mr-6 mt-1 md:mt-0">
+                    
+                    <img src="https://placehold.co/100x100/C87431/FFFFFF?text=Pie" onerror="this.onerror=null;this.src='https://placehold.co/100x100/C87431/FFFFFF?text=Pie'" alt="Seasonal Pumpkin Pie" class="w-24 h-24 object-cover rounded-lg mr-6 flex-shrink-0">
+                    
+                    <div class="flex-1 min-w-0 pr-4 mt-4 md:mt-0">
+                        <h3 class="text-xl font-semibold text-gray-900">Seasonal Pumpkin Pie</h3>
+                        <p class="text-sm text-gray-500 mb-2">Limited Edition, 9-inch whole pie</p>
+                        <p class="text-lg font-medium text-(--maroon-color) item-price">₱ 850.00</p>
+                    </div>
+
+                    <div class="flex items-center gap-6 mt-4 md:mt-0">
+                        <!-- Quantity Control -->
+                        <div class="flex items-center border border-gray-300 rounded-lg quantity-control">
+                            <button class="quantity-btn p-2 text-gray-600 hover:bg-gray-100 rounded-l-lg font-bold" data-action="decrease">-</button>
+                            <input type="number" value="1" min="1" class="w-12 text-center border-x border-gray-300 py-1 text-lg font-medium item-quantity" readonly>
+                            <button class="quantity-btn p-2 text-gray-600 hover:bg-gray-100 rounded-r-lg font-bold" data-action="increase">+</button>
+                        </div>
+                        
+                        <!-- Total Price for Item -->
+                        <p class="text-xl font-bold text-gray-800 w-28 text-right item-total">₱ 850.00</p>
+
+                        <!-- Remove Button -->
+                        <button class="remove-item text-red-500 hover:text-red-700 transition duration-150 ml-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Empty Cart Placeholder (hidden by default) -->
+                 <div id="empty-cart-message" class="hidden text-center p-12 bg-white rounded-xl shadow-lg border border-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-16 mx-auto mb-4 text-gray-300" viewBox="0 0 24 24" fill="currentColor"><path d="M17 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-1.11-.89-2-2-2zM7 18c-1.11 0-2 .89-2 2a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-1.11-.89-2-2-2zm14.59-12.83l-4.22-5.18c-.19-.24-.46-.39-.75-.39H5c-1.11 0-1.99.89-1.99 2L3 17c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-9.3c0-.32-.13-.63-.36-.85zM5.33 17l1.45-3h11.45l1.45 3H5.33zM7 13c0-2.76 2.24-5 5-5s5 2.24 5 5H7z"/></svg>
+                    <p class="text-2xl font-semibold text-gray-700 mb-2">Your Cart is Empty!</p>
+                    <p class="text-gray-500">Time to treat yourself. Head over to our menu and pick up a delicious treat.</p>
+                    <a href="menu.html" class="mt-4 inline-block px-6 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition duration-150">
+                        Continue Shopping
+                    </a>
+                </div>
+
+            </section>
+            
+            <!-- Right Column: Order Summary (Sticky) -->
+            <aside class="lg:w-2/5 sticky top-[100px] h-fit p-8 bg-white rounded-xl shadow-2xl border border-gray-100">
+                <h2 class="text-3xl font-bold text-(--maroon-color) mb-6">Order Summary</h2>
+                
+                <div class="space-y-4 text-gray-700">
+                    <div class="flex justify-between items-center pb-2">
+                        <span class="text-lg">Items Subtotal (<span id="summary-item-count">3</span>)</span>
+                        <span class="text-xl font-medium" id="summary-subtotal">₱ 6,450.00</span>
+                    </div>
+
+                    <div class="flex justify-between items-center border-t border-dashed pt-4">
+                        <span class="text-lg">Shipping Estimate</span>
+                        <span class="text-xl font-medium" id="summary-shipping">₱ 150.00</span>
+                    </div>
+
+                    <div class="flex justify-between items-center border-t border-dashed pt-4">
+                        <span class="text-lg">Discount Applied</span>
+                        <span class="text-xl font-medium text-green-600" id="summary-discount">-₱ 0.00</span>
+                    </div>
+
+                    <!-- Promo Code Input -->
+                    <div class="pt-4 flex gap-2">
+                        <input type="text" placeholder="Promo Code" class="flex-1 p-3 border border-gray-300 rounded-lg focus:border-blue-500 outline-none">
+                        <button class="px-5 bg-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-300 transition duration-150">Apply</button>
+                    </div>
+
+                    <div class="flex justify-between items-center border-t pt-6">
+                        <span class="text-2xl font-extrabold text-gray-900">Order Total</span>
+                        <span class="text-3xl font-extrabold text-green-600" id="summary-total">₱ 6,600.00</span>
+                    </div>
+                </div>
+
+                <button class="w-full mt-8 py-4 bg-green-600 text-white font-bold text-xl rounded-lg shadow-lg hover:bg-green-700 transition duration-200 uppercase">
+                    Proceed to Checkout
+                </button>
+            </aside>
+
         </div>
     </main>
     
     <!-- Footer -->
-    <footer class="w-full h-[220px] bg-(--bg-color) flex px-[70px] items-center py-[50px]">
-        <div class="w-full h-full flex flex-col gap-5 justify-end">
+    <footer class="w-full h-[220px] bg-(--bg-color) flex flex-col md:flex-row px-4 lg:px-[70px] items-center py-[50px] mt-auto">
+        <div class="w-full md:w-1/2 h-full flex flex-col gap-5 justify-end mb-4 md:mb-0">
             <h1 class="text-[30px] font-bold text-(--maroon-color)">Visit Us</h1>
-            <p class="text-[16px] text-(--gray-color)">9998 Hayes Isle, Mantefurt 03581</p>
-            <p class="text-[16px] text-(--gray-color)">505-418-0415</p>
+            <p class="text-[16px] text-gray-500">9998 Hayes Isle, Mantefurt 03581</p>
+            <p class="text-[16px] text-gray-500">505-418-0415</p>
         </div>
-        <div class="w-full h-full flex gap-5 items-end justify-end">
-            <p class="text-[16px] text-(--gray-color)">Follow Us:</p>
-            <img src="assets/Facebook.svg" class="w-[25px]">
-            <img src="assets/Instagram.svg" class="w-[25px]">
+        <div class="w-full md:w-1/2 h-full flex gap-5 items-end justify-start md:justify-end">
+            <p class="text-[16px] text-gray-500">Follow Us:</p>
+            <img src="assets/Facebook.svg" class="w-[25px]" onerror="this.onerror=null;this.src='https://placehold.co/25x25/800000/FFFFFF?text=F'" alt="Facebook">
+            <img src="assets/Instagram.svg" class="w-[25px]" onerror="this.onerror=null;this.src='https://placehold.co/25x25/800000/FFFFFF?text=I'" alt="Instagram">
         </div>
     </footer>
-    <!--/ Footer  -->
+    <!--/ Footer -->
 
+    <script>
+        const cartContainer = document.getElementById('cart-items-container');
+        const cartItemCountEl = document.getElementById('cart-item-count');
+        const cartCountMessageEl = document.getElementById('cart-count-message');
+        const emptyCartMessageEl = document.getElementById('empty-cart-message');
+        const selectAllCheckbox = document.getElementById('select-all');
+
+        // Summary elements
+        const summaryItemCountEl = document.getElementById('summary-item-count');
+        const summarySubtotalEl = document.getElementById('summary-subtotal');
+        const summaryShippingEl = document.getElementById('summary-shipping');
+        const summaryTotalEl = document.getElementById('summary-total');
+
+        // Fixed shipping fee for demonstration
+        const SHIPPING_FEE = 150.00; 
+
+        // Utility function for currency formatting (Philippine Peso)
+        const formatCurrency = (amount) => {
+            return `₱ ${amount.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+        };
+
+        // Main function to calculate and update the summary
+        function updateCartSummary() {
+            const allItemCards = document.querySelectorAll('.cart-item-card:not([style*="display: none"])');
+            let totalSubtotal = 0;
+            let totalItems = 0;
+
+            if (allItemCards.length === 0) {
+                cartContainer.classList.add('flex-col');
+                emptyCartMessageEl.classList.remove('hidden');
+            } else {
+                emptyCartMessageEl.classList.add('hidden');
+            }
+
+            allItemCards.forEach(card => {
+                // Only count items that are checked (for checkout simulation)
+                const checkbox = card.querySelector('.cart-item-checkbox');
+                if (checkbox && checkbox.checked) {
+                    const price = parseFloat(card.dataset.price);
+                    const quantityEl = card.querySelector('.item-quantity');
+                    const quantity = parseInt(quantityEl.value);
+
+                    const itemTotal = price * quantity;
+                    totalSubtotal += itemTotal;
+                    totalItems += quantity;
+
+                    // Update individual item total display
+                    card.querySelector('.item-total').textContent = formatCurrency(itemTotal);
+                }
+            });
+
+            const total = totalSubtotal + SHIPPING_FEE;
+
+            // Update Header and Message
+            cartItemCountEl.textContent = allItemCards.length;
+            cartCountMessageEl.textContent = `You have ${allItemCards.length} item${allItemCards.length !== 1 ? 's' : ''} in your cart.`;
+
+            // Update Summary
+            summaryItemCountEl.textContent = totalItems;
+            summarySubtotalEl.textContent = formatCurrency(totalSubtotal);
+            summaryShippingEl.textContent = totalSubtotal > 0 ? formatCurrency(SHIPPING_FEE) : formatCurrency(0);
+            summaryTotalEl.textContent = formatCurrency(total);
+        }
+
+        // --- Event Listeners Setup ---
+
+        // 1. Quantity Control (Increase/Decrease)
+        document.querySelectorAll('.quantity-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const card = e.target.closest('.cart-item-card');
+                const quantityInput = card.querySelector('.item-quantity');
+                const action = e.target.dataset.action;
+                let currentValue = parseInt(quantityInput.value);
+
+                if (action === 'increase') {
+                    currentValue++;
+                } else if (action === 'decrease' && currentValue > 1) {
+                    currentValue--;
+                }
+
+                quantityInput.value = currentValue;
+                card.dataset.quantity = currentValue; // Update data attribute
+                updateCartSummary();
+            });
+        });
+
+        // 2. Remove Item
+        document.querySelectorAll('.remove-item').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const card = e.target.closest('.cart-item-card');
+                // Use a standard confirmation dialog replacement for better UX
+                const customConfirm = document.createElement('div');
+                customConfirm.innerHTML = `
+                    <div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+                        <div class="bg-white p-6 rounded-xl shadow-2xl max-w-sm w-full text-center">
+                            <h3 class="text-xl font-bold mb-3 text-red-600">Remove Item?</h3>
+                            <p class="mb-5 text-gray-700">Are you sure you want to remove this item from your cart?</p>
+                            <div class="flex justify-center gap-4">
+                                <button id="confirm-remove" class="px-6 py-2 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition duration-150">Yes, Remove</button>
+                                <button id="cancel-remove" class="px-6 py-2 bg-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-300 transition duration-150">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(customConfirm);
+
+                document.getElementById('confirm-remove').addEventListener('click', () => {
+                    card.style.display = 'none'; // Hide the card
+                    customConfirm.remove();
+                    updateCartSummary();
+                });
+
+                document.getElementById('cancel-remove').addEventListener('click', () => {
+                    customConfirm.remove();
+                });
+            });
+        });
+
+        // 3. Select All / Individual Item Checkbox
+        selectAllCheckbox.addEventListener('change', () => {
+            document.querySelectorAll('.cart-item-checkbox').forEach(checkbox => {
+                checkbox.checked = selectAllCheckbox.checked;
+            });
+            updateCartSummary();
+        });
+
+        document.querySelectorAll('.cart-item-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const allChecked = Array.from(document.querySelectorAll('.cart-item-checkbox')).every(c => c.checked);
+                selectAllCheckbox.checked = allChecked;
+                updateCartSummary();
+            });
+        });
+
+
+        // Initial calculation on load
+        window.onload = updateCartSummary;
+    </script>
 </body>
 </html>
