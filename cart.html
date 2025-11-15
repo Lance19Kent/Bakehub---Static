@@ -4,17 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/src/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Define custom color variables for consistency across the site */
-        :root {
-            --maroon-color: #800000;
-            --gray-color: #D1D1D1;
-            --bg-color: #f7f7f7;
-            --accent-pink: #fef5fd; /* Used in the original code */
-        }
+
         /* Custom Tailwind class definitions using CSS variables */
         .text-\(--maroon-color\) { color: var(--maroon-color); }
         .bg-\(--maroon-color\) { background-color: var(--maroon-color); }
@@ -48,9 +43,9 @@
     </style>
 </head>
 <body class="w-full min-h-screen flex flex-col">
-    
+
     <!-- Header -->
-    <header class="w-full h-20 bg-white flex items-center justify-between px-[50px] fixed z-20 shadow-md">
+    <header class="w-full h-20 bg-white flex items-center justify-between px-[50px] fixed z-2">
         <div class="w-full gap-2.5 flex items-center">
             <img src="assets/bakehub-logo.svg" alt="Bakehub Logo" class="w-15">
             <a href="index.html" class="text-(--maroon-color) font-bold text-[30px]">Bake Hub</a>
@@ -60,20 +55,14 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="aboutUs.html">About Us</a></li>
-                <li class="relative z-1"><input type="text" placeholder="Search" class="peer relative w-[250px] border border-(--gray-color) outline-none py-2 focus:border-(--maroon-color) rounded-sm text-[14px] placeholder:text-[16px] pr-2.5 pl-2.5 placeholder:pl-6 placeholder:text-(--gray-color) text-black placeholder-shown:placeholder:opacity-100 focus:placeholder:opacity-0">
+                <li class="relative z-1"><input type="text" placeholder="Search" class="peer relative w-[250px] border border-(--gray-color)  outline-none py-2 focus:border-(--maroon-color) rounded-sm text-[14px] placeholder:text-[16px] pr-2.5 pl-2.5 placeholder:pl-6 placeholder:text-(--gray-color) text-black placeholder-shown:placeholder:opacity-100 focus:placeholder:opacity-0">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-[7px] left-2.5 z-0 peer-placeholder-shown:opacity-100 peer-focus:opacity-0 opacity-0">
                     <path d="M12.5 14H11.71L11.43 13.73C12.444 12.5541 13.0012 11.0527 13 9.5C13 8.21442 12.6188 6.95772 11.9046 5.8888C11.1903 4.81988 10.1752 3.98676 8.98744 3.49479C7.79973 3.00282 6.49279 2.87409 5.23192 3.1249C3.97104 3.3757 2.81285 3.99477 1.90381 4.90381C0.994767 5.81285 0.375703 6.97104 0.124899 8.23192C-0.125905 9.49279 0.00281635 10.7997 0.494786 11.9874C0.986756 13.1752 1.81988 14.1903 2.8888 14.9046C3.95772 15.6188 5.21442 16 6.5 16C8.11 16 9.59 15.41 10.73 14.43L11 14.71V15.5L16 20.49L17.49 19L12.5 14ZM6.5 14C4.01 14 2 11.99 2 9.5C2 7.01 4.01 5 6.5 5C8.99 5 11 7.01 11 9.5C11 11.99 8.99 14 6.5 14Z" fill="#D1D1D1"/>
-                    </svg>
+                </svg>
                 </li>
                 <li>
-                    <a href="cart.html" class="flex items-center text-(--maroon-color) hover:text-opacity-80 transition duration-150 relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-                        <span class="absolute -top-2 -right-3 inline-flex items-center justify-center px-2 py-0.5 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">3</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="login.html" class="text-white rounded-sm border py-2 px-10 flex gap-[7px] bg-(--maroon-color) items-center justify-center fill-white ease-out duration-300 hover:text-(--maroon-color) hover:bg-white hover:fill-(--maroon-color)">
-                        <svg viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg" class=" w-4.5">
+                    <a href="login.html" class="text-white rounded-sm border py-2 px-10 flex gap-[7px]  bg-(--maroon-color) items-center justify-center fill-white ease-out duration-300 hover:text-(--maroon-color) hover:bg-white hover:fill-(--maroon-color)">
+                        <svg viewBox="0 0 14 13"  xmlns="http://www.w3.org/2000/svg" class=" w-4.5">
                             <mask id="mask0_134_630" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="7" width="11" height="6">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.97131H10.1225V12.7044H0V7.97131Z" fill="white"/>
                             </mask>
@@ -90,7 +79,7 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M5.06088 1.00002C3.72421 1.00002 2.63688 2.08735 2.63688 3.42335C2.63688 4.75935 3.72421 5.84669 5.06088 5.84669H5.08155C5.72422 5.84402 6.32955 5.59135 6.78355 5.13335C7.23821 4.67669 7.48688 4.06935 7.48421 3.42535C7.48421 2.08735 6.39688 1.00002 5.06088 1.00002ZM5.06072 6.84667C3.17272 6.84667 1.63672 5.31067 1.63672 3.42333C1.63672 1.536 3.17272 0 5.06072 0C6.94805 0 8.48405 1.536 8.48405 3.42333C8.48805 4.33267 8.13539 5.19133 7.49272 5.838C6.85139 6.48533 5.99472 6.84333 5.08339 6.84667H5.06072Z" />
                         </svg>
                         <span>Sign In</span>
-                    </a> 
+                    </a>  
                 </li>
             </ul>
         </div>
