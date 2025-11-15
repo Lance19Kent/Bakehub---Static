@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,7 +60,6 @@
         <h1 class="text-[46px] font-semibold mb-8">User Profile</h1>
 
         <div class="w-full flex gap-10">
-            
             <div class="w-1/4 max-w-[300px] flex flex-col gap-6">
                 <div class="flex items-center gap-3 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
                     <div class="relative group">
@@ -71,23 +70,19 @@
                     </div>
                     <div class="flex flex-col">
                         <h2 class="text-lg font-semibold text-gray-800">John Sackman</h2>
-                        <p class="text-sm text-gray-500">Customer</p>
+                        <p class="text-sm text-green-500">Customer</p>
                     </div>
                 </div>
 
                 <div class="flex flex-col gap-1">
-                    <button data-section="personal-info" class="nav-link text-lg font-medium py-3 px-4 rounded-lg text-white bg-(--maroon-color) hover:bg-opacity-90 transition duration-150 flex items-center gap-2">
+                    <a data-section="personal-info" class="nav-link text-lg cursor-pointer font-medium py-3 px-4 rounded-lg text-white bg-(--maroon-color) hover:bg-opacity-90 transition duration-150 flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
                         Personal Info
-                    </button>
-                    <button data-section="my-purchases" class="nav-link text-lg font-medium py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 transition duration-150 flex items-center gap-2">
+                    </a>
+                    <a href="#my-purchases-content" data-section="my-purchases" class="nav-link text-lg cursor-pointer font-medium py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 transition duration-150 flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-4 0c0-1.1-.9-2-2-2s-2 .9-2 2h4zm-2 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
-                        My Purchases
-                    </button>
-                    <button data-section="my-cart" class="nav-link text-lg font-medium py-3 px-4 rounded-lg text-gray-700 hover:bg-gray-100 transition duration-150 flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.59-.25.9 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25 0-.04.02-.08.05-.12L8.58 13h7.43c.47 0 .8.26.97.64l3.12 6.18c.25.46.12 1.05-.33 1.3.45.25.12-.34.37-.8.5-.94.7-2.02.66-3.14V7c0-.55-.45-1-1-1H6.58l-.7-1.42c-.28-.56-.84-.98-1.5-.98H4.28L3.29 2H1zm18 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-                        My Cart (3)
-                    </button>
+                        Order History
+                    </a>
                     </div>
             </div>
 
@@ -127,8 +122,8 @@
                     </div>
                 </section>
                 
-                <section id="my-purchases-content" class="profile-content bg-white p-8 rounded-lg shadow-lg border border-gray-100 hidden">
-                    <h2 class="text-3xl font-semibold text-(--maroon-color) mb-6">My Purchases</h2>
+                <section id="my-purchases-content" class="profile-content bg-white p-8 rounded-lg shadow-lg border border-gray-100">
+                    <h2 class="text-3xl font-semibold text-(--maroon-color) mb-6">Order History</h2>
                     
                     <div class="flex border-b border-gray-200 mb-6">
                         <button class="tab-button text-lg font-medium px-6 py-3 border-b-2 border-(--maroon-color) text-(--maroon-color) transition duration-150">To Pay (2)</button>
@@ -140,83 +135,6 @@
 
                     <div id="purchase-content" class="flex flex-col gap-4">
                         </div>
-                </section>
-
-                <section id="my-cart-content" class="profile-content bg-white p-8 rounded-lg shadow-lg border border-gray-100 hidden">
-                    <h2 class="text-3xl font-semibold text-(--maroon-color) mb-6">Shopping Cart (3 Items)</h2>
-                    
-                    <div class="flex flex-col lg:flex-row gap-8">
-                        <div class="flex-1 flex flex-col gap-4">
-                            <div class="flex items-center border border-gray-100 p-4 rounded-lg shadow-sm">
-                    <img src="https://placehold.co/100x100/f5a9b8/FFFFFF?text=Cake" onerror="this.onerror=null;this.src='https://placehold.co/100x100/f5a9b8/FFFFFF?text=Cake'" alt="Sanrio Cake" class="w-24 h-24 object-cover rounded-lg mr-6 flex-shrink-0">                               
-                     <div class="flex-1">
-                                    <h3 class="font-semibold text-lg text-gray-800">Red Velvet Cake - 6 inch</h3>
-                                    <p class="text-sm text-gray-500">₱ 1,250.00 each</p>
-                                </div>
-                                <div class="flex items-center gap-2 mr-4">
-                                    <button class="text-gray-500 hover:text-(--maroon-color)">-</button>
-                                    <input type="number" value="1" min="1" class="w-12 text-center border rounded py-1 px-2">
-                                    <button class="text-gray-500 hover:text-(--maroon-color)">+</button>
-                                </div>
-                                <p class="font-bold text-gray-800 w-20 text-right">₱ 1,250.00</p>
-                                <button class="ml-4 text-red-500 hover:text-red-700 transition duration-150">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4h-3.5z"/></svg>
-                                </button>
-                            </div>
-                            <div class="flex items-center border border-gray-100 p-4 rounded-lg shadow-sm">
-                    <img src="https://placehold.co/100x100/502C1F/FFFFFF?text=Brownies" onerror="this.onerror=null;this.src='https://placehold.co/100x100/502C1F/FFFFFF?text=Brownies'" alt="Decadent Chocolate Brownies" class="w-24 h-24 object-cover rounded-lg mr-6 flex-shrink-0">
-                    
-                                <div class="flex-1">
-                                    <h3 class="font-semibold text-lg text-gray-800">Decadent Chocolate Brownies</h3>
-                                    <p class="text-sm text-gray-500">₱ 300.00 per box</p>
-                                </div>
-                                <div class="flex items-center gap-2 mr-4">
-                                    <button class="text-gray-500 hover:text-(--maroon-color)">-</button>
-                                    <input type="number" value="2" min="1" class="w-12 text-center border rounded py-1 px-2">
-                                    <button class="text-gray-500 hover:text-(--maroon-color)">+</button>
-                                </div>
-                                <p class="font-bold text-gray-800 w-20 text-right">₱ 600.00</p>
-                                <button class="ml-4 text-red-500 hover:text-red-700 transition duration-150">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4h-3.5z"/></svg>
-                                </button>
-                            </div>
-                             <div class="flex items-center border border-gray-100 p-4 rounded-lg shadow-sm">
-                                <img src="https://placehold.co/100x100/C87431/FFFFFF?text=Pie" onerror="this.onerror=null;this.src='https://placehold.co/100x100/C87431/FFFFFF?text=Pie'" alt="Seasonal Pumpkin Pie" class="w-24 h-24 object-cover rounded-lg mr-6 flex-shrink-0">
-                                <div class="flex-1">
-                                    <h3 class="font-semibold text-lg text-gray-800">Vanilla Cupcakes - Dozen</h3>
-                                    <p class="text-sm text-gray-500">₱ 480.00 per dozen</p>
-                                </div>
-                                <div class="flex items-center gap-2 mr-4">
-                                    <button class="text-gray-500 hover:text-(--maroon-color)">-</button>
-                                    <input type="number" value="1" min="1" class="w-12 text-center border rounded py-1 px-2">
-                                    <button class="text-gray-500 hover:text-(--maroon-color)">+</button>
-                                </div>
-                                <p class="font-bold text-gray-800 w-20 text-right">₱ 480.00</p>
-                                <button class="ml-4 text-red-500 hover:text-red-700 transition duration-150">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4h-3.5z"/></svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="w-full lg:w-[350px] bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 self-start">
-                            <h3 class="text-2xl font-semibold mb-4 text-(--maroon-color)">Order Summary</h3>
-                            <div class="flex justify-between text-lg mb-2">
-                                <span>Subtotal (3 items)</span>
-                                <span>₱ 2,330.00</span>
-                            </div>
-                            <div class="flex justify-between text-lg mb-4 pb-4 border-b">
-                                <span>Shipping Fee</span>
-                                <span>₱ 150.00</span>
-                            </div>
-                            <div class="flex justify-between text-2xl font-bold text-(--maroon-color) mb-6">
-                                <span>Total:</span>
-                                <span>₱ 2,480.00</span>
-                            </div>
-                            <button class="w-full py-3 bg-green-600 text-white font-semibold text-xl rounded-lg hover:bg-green-700 transition duration-150">
-                                Proceed to Checkout
-                            </button>
-                        </div>
-                    </div>
                 </section>
 
             </div>
@@ -303,36 +221,6 @@
     </footer>
 
     <script>
-        // --- Profile Content Switching ---
-        const navLinks = document.querySelectorAll('.nav-link');
-        const profileSections = document.querySelectorAll('.profile-content');
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                const targetId = link.getAttribute('data-section') + '-content';
-
-                // Update active navigation link styles
-                navLinks.forEach(nav => {
-                    nav.classList.remove('bg-(--maroon-color)', 'text-white');
-                    nav.classList.add('text-gray-700', 'hover:bg-gray-100');
-                });
-                link.classList.add('bg-(--maroon-color)', 'text-white');
-                link.classList.remove('text-gray-700', 'hover:bg-gray-100');
-
-                // Switch content visibility
-                profileSections.forEach(section => {
-                    section.classList.add('hidden');
-                });
-                document.getElementById(targetId).classList.remove('hidden');
-
-                // For the "My Purchases" tab, initialize the inner tab content
-                if (targetId === 'my-purchases-content') {
-                    // Simulate clicking the first tab button ("To Pay")
-                    document.querySelector('#my-purchases-content .tab-button').click();
-                }
-            });
-        });
-
         // --- My Purchases Tabs Switching (Existing logic with minor cleanup) ---
         const tabButtons = document.querySelectorAll('.tab-button');
         const purchaseContent = document.getElementById('purchase-content');
@@ -359,7 +247,7 @@
                             <span class="text-sm text-gray-500">Order ID: #BHU98765</span>
                         </div>
                         <div class="flex gap-4 items-center border-t pt-3">
-                            <img src="/assets/img/example-cake.jpg" alt="Product Image" class="w-16 h-16 object-cover rounded">
+                    <img src="https://placehold.co/100x100/C87431/FFFFFF?text=Pie" onerror="this.onerror=null;this.src='https://placehold.co/100x100/C87431/FFFFFF?text=Pie'" alt="Seasonal Pumpkin Pie" class="w-24 h-24 object-cover rounded-lg mr-6 flex-shrink-0">
                             <div class="flex-1">
                                 <h3 class="font-medium">Red Velvet Cake - 6 inch</h3>
                                 <p class="text-sm text-gray-500">Quantity: 1</p>
