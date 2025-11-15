@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="w-full min-h-screen">
+
+    <!-- Header -->
+    <header class="w-full h-20 bg-white flex items-center justify-between px-[50px] fixed z-2">
+        <div class="w-full gap-2.5 flex items-center">
+            <img src="assets/bakehub-logo.svg" alt="Bakehub Logo" class="w-15">
+            <a href="index.html" class="text-(--maroon-color) font-bold text-[30px]">Bake Hub</a>
+        </div>
+        <div class="flex w-full justify-end whitespace-nowrap">
+            <ul class="w-full flex gap-12 text-[18px] items-center text-(--maroon-color)">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li class="relative z-1"><input type="text" placeholder="Search" class="peer relative w-[250px] border border-(--gray-color)  outline-none py-2 focus:border-(--maroon-color) rounded-sm text-[14px] placeholder:text-[16px] pr-2.5 pl-2.5 placeholder:pl-6 placeholder:text-(--gray-color) text-black placeholder-shown:placeholder:opacity-100 focus:placeholder:opacity-0">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-[7px] left-2.5 z-0 peer-placeholder-shown:opacity-100 peer-focus:opacity-0 opacity-0">
+                    <path d="M12.5 14H11.71L11.43 13.73C12.444 12.5541 13.0012 11.0527 13 9.5C13 8.21442 12.6188 6.95772 11.9046 5.8888C11.1903 4.81988 10.1752 3.98676 8.98744 3.49479C7.79973 3.00282 6.49279 2.87409 5.23192 3.1249C3.97104 3.3757 2.81285 3.99477 1.90381 4.90381C0.994767 5.81285 0.375703 6.97104 0.124899 8.23192C-0.125905 9.49279 0.00281635 10.7997 0.494786 11.9874C0.986756 13.1752 1.81988 14.1903 2.8888 14.9046C3.95772 15.6188 5.21442 16 6.5 16C8.11 16 9.59 15.41 10.73 14.43L11 14.71V15.5L16 20.49L17.49 19L12.5 14ZM6.5 14C4.01 14 2 11.99 2 9.5C2 7.01 4.01 5 6.5 5C8.99 5 11 7.01 11 9.5C11 11.99 8.99 14 6.5 14Z" fill="#D1D1D1"/>
+                </svg>
+                </li>
+                <li>
+                    <a href="login.html" class="text-white rounded-sm border py-2 px-10 flex gap-[7px]  bg-(--maroon-color) items-center justify-center fill-white ease-out duration-300 hover:text-(--maroon-color) hover:bg-white hover:fill-(--maroon-color)">
+                        <svg viewBox="0 0 14 13"  xmlns="http://www.w3.org/2000/svg" class=" w-4.5">
+                            <mask id="mask0_134_630" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="7" width="11" height="6">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.97131H10.1225V12.7044H0V7.97131Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_134_630)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.06117 8.97133C3.2085 8.97133 0.999837 9.20933 0.999837 10.346C0.999837 11.2473 2.3665 11.7047 5.06117 11.7047C7.75584 11.7047 9.12251 11.2427 9.12251 10.3327C9.12251 9.42933 7.75584 8.97133 5.06117 8.97133ZM5.06133 12.7046C3.67733 12.7046 0 12.7046 0 10.346C0 7.97131 3.80933 7.97131 5.06133 7.97131C7.234 7.97131 10.1227 8.21598 10.1227 10.3326C10.1227 12.7046 6.31333 12.7046 5.06133 12.7046Z" />
+                            </g>
+                            <mask id="mask1_134_630" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="7" width="4" height="4">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5635 7.65564H13.3193V10.974H10.5635V7.65564Z" />
+                            </mask>
+                            <g mask="url(#mask1_134_630)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9303 10.974C11.7283 10.974 11.5383 10.8507 11.463 10.6513C11.365 10.3933 11.495 10.104 11.753 10.0067C12.3197 9.79199 12.3197 9.52999 12.3197 9.41799C12.3197 9.03999 11.8723 8.78133 10.9903 8.64999C10.717 8.60866 10.5283 8.35399 10.569 8.08133C10.6103 7.80799 10.8697 7.62466 11.1377 7.65999C12.9417 7.92999 13.3197 8.76533 13.3197 9.41799C13.3197 9.90399 13.1097 10.562 12.1077 10.9413C12.0497 10.9633 11.9897 10.974 11.9303 10.974Z"/>
+                            </g>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.65478 6.08793C9.40944 6.08793 9.19544 5.90726 9.16011 5.65726C9.12211 5.38393 9.31211 5.13059 9.58544 5.09259C10.4174 4.97593 11.0454 4.25393 11.0468 3.41259C11.0468 2.57659 10.4481 1.87126 9.62478 1.73659C9.35211 1.69126 9.16744 1.43459 9.21211 1.16193C9.25678 0.889259 9.51478 0.705925 9.78611 0.749259C11.0961 0.963925 12.0468 2.08459 12.0468 3.41326C12.0441 4.74993 11.0461 5.89793 9.72478 6.08326C9.70144 6.08659 9.67811 6.08793 9.65478 6.08793Z" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.06088 1.00002C3.72421 1.00002 2.63688 2.08735 2.63688 3.42335C2.63688 4.75935 3.72421 5.84669 5.06088 5.84669H5.08155C5.72422 5.84402 6.32955 5.59135 6.78355 5.13335C7.23821 4.67669 7.48688 4.06935 7.48421 3.42535C7.48421 2.08735 6.39688 1.00002 5.06088 1.00002ZM5.06072 6.84667C3.17272 6.84667 1.63672 5.31067 1.63672 3.42333C1.63672 1.536 3.17272 0 5.06072 0C6.94805 0 8.48405 1.536 8.48405 3.42333C8.48805 4.33267 8.13539 5.19133 7.49272 5.838C6.85139 6.48533 5.99472 6.84333 5.08339 6.84667H5.06072Z" />
+                        </svg>
+                        <span>Sign In</span>
+                    </a>  
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!--/ Header -->
+
+    <main class="flex-1 w-full min-h-screen flex flex-col items-center gap-10 pb-[70px] pt-[100px]">
+        <!-- Notification Header -->
+        <div class="flex flex-col gap-3 mb-8">
+            <div class="flex items-center gap-4">
+                <div class="p-3 bg-[var(--accent-pink)] w-fit rounded-full shadow-inner">
+                    <!-- Bell Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-8 text-(--maroon-color)" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.93 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+                </div> 
+                <h1 class="text-(--maroon-color) text-4xl lg:text-5xl font-bold">Notifications</h1>
+            </div>
+            <p class="text-gray-500 font-medium ml-4">Stay updated on your orders, special offers, and feedback requests.</p>
+        </div>
+
+        <!-- Notification Content Area -->
+        <div class="w-full bg-white rounded-xl shadow-xl border border-gray-100 p-6">
+            
+            <!-- Tabs and Controls -->
+            <div class="flex justify-between items-center border-b pb-4 mb-6">
+                <div class="flex gap-4">
+                    <button class="notification-tab text-lg font-bold px-4 py-2 border-b-2 border-(--maroon-color) text-(--maroon-color) transition duration-150" data-tab="unread">
+                        Unread (2)
+                    </button>
+                    <button class="notification-tab text-lg font-medium px-4 py-2 border-b-2 border-transparent text-gray-500 hover:text-(--maroon-color) hover:border-gray-300 transition duration-150" data-tab="archived">
+                        Archived (5)
+                    </button>
+                </div>
+                <button class="text-blue-600 hover:text-blue-800 font-semibold text-sm transition duration-150 flex items-center gap-1" onclick="markAllAsRead()">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3 7-7"/></svg>
+                    Mark All as Read
+                </button>
+            </div>
+
+            <!-- Notification List Container -->
+            <div id="notification-list" class="flex flex-col gap-4">
+                
+                <!-- UNREAD Notification 1: Order Confirmation (Active/New) -->
+                <div class="notification-item unread flex gap-4 p-4 rounded-lg shadow-sm border border-gray-100 bg-white hover:shadow-md transition duration-200 cursor-pointer relative" data-type="order-confirm">
+                    <!-- Unread Indicator Dot -->
+                    <span class="absolute top-2 left-2 block h-2.5 w-2.5 rounded-full bg-red-500"></span>
+
+                    <!-- Icon: Order Status -->
+                    <div class="flex-shrink-0 p-3 bg-blue-100 text-blue-600 rounded-full size-12 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-10 10-10 10 10 10 10"/><path d="M8 17a4 4 0 1 1 8 0"/><path d="M12 2a10 10 0 0 0 0 20"/></svg>
+                    </div>
+
+                    <div class="flex-1">
+                        <p class="text-sm text-gray-400 mb-1">2 minutes ago</p>
+                        <p class="font-medium text-gray-800">
+                            Your order **#BH2025-1028** for <span class="text-blue-600 font-semibold">Chocolate Birthday Cake</span> has been **confirmed!** Pickup scheduled for Saturday, Nov 16 at 10:00 AM. Total: ₱ 5,000.00
+                        </p>
+                        <span class="inline-block mt-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-blue-500 text-white">ORDER UPDATE</span>
+                    </div>
+                </div>
+
+                <!-- UNREAD Notification 2: New Product Arrival -->
+                <div class="notification-item unread flex gap-4 p-4 rounded-lg shadow-sm border border-gray-100 bg-white hover:shadow-md transition duration-200 cursor-pointer relative" data-type="new-product">
+                    <span class="absolute top-2 left-2 block h-2.5 w-2.5 rounded-full bg-red-500"></span>
+                    
+                    <!-- Icon: Star (New) -->
+                    <div class="flex-shrink-0 p-3 bg-yellow-100 text-yellow-600 rounded-full size-12 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+                    </div>
+
+                    <div class="flex-1">
+                        <p class="text-sm text-gray-400 mb-1">4 hours ago</p>
+                        <p class="font-medium text-gray-800">
+                            **New Arrival!** Pumpkin Spice Cupcakes now available! Made with real pumpkin and topped with cream cheese frosting. Order yours today!
+                        </p>
+                        <span class="inline-block mt-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-yellow-500 text-white">NEW PRODUCT</span>
+                    </div>
+                </div>
+                
+                <!-- ARCHIVED Notification 1: Delivery Confirmation (Read) -->
+                <div class="notification-item read flex gap-4 p-4 rounded-lg border border-gray-100 bg-[var(--notification-read)] text-gray-500 transition duration-200 cursor-pointer hidden" data-type="delivery-complete">
+                    <!-- Icon: Checkmark (Delivered) -->
+                    <div class="flex-shrink-0 p-3 bg-green-100 text-green-600 rounded-full size-12 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                    </div>
+
+                    <div class="flex-1">
+                        <p class="text-sm text-gray-400 mb-1">1 day ago</p>
+                        <p class="font-medium">
+                            Your order **#BH2025-1015** has been successfully **delivered.** Thank you for choosing Bake Hub!
+                        </p>
+                        <span class="inline-block mt-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-green-500 text-white">DELIVERED</span>
+                    </div>
+                </div>
+
+                <!-- ARCHIVED Notification 2: Feedback Request (Read) -->
+                <div class="notification-item read flex gap-4 p-4 rounded-lg border border-gray-100 bg-[var(--notification-read)] text-gray-500 transition duration-200 cursor-pointer hidden" data-type="feedback-request">
+                    <!-- Icon: Chat bubble -->
+                    <div class="flex-shrink-0 p-3 bg-red-100 text-red-600 rounded-full size-12 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 11H7V9h2v2zm4 0h-2V9h2v2zm4 0h-2V9h2v2z"/></svg>
+                    </div>
+
+                    <div class="flex-1">
+                        <p class="text-sm text-gray-400 mb-1">3 days ago</p>
+                        <p class="font-medium">
+                            How was your recent chocolate cake? **Rate your experience** and get a 10% discount on your next order!
+                        </p>
+                        <span class="inline-block mt-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-red-500 text-white">FEEDBACK REQUEST</span>
+                    </div>
+                </div>
+
+                <!-- Empty State (Hidden by default) -->
+                <div id="empty-state" class="hidden text-center p-16 bg-gray-50 rounded-lg border border-dashed border-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-16 mx-auto mb-4 text-gray-300" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.93 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+                    <p class="text-xl font-semibold text-gray-700 mb-2">You're All Caught Up!</p>
+                    <p class="text-gray-500">No new notifications in this tab. Check your orders or enjoy some quiet time!</p>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    <footer class="w-full h-[220px] bg-(--bg-color) flex px-[70px] items-center py-[50px]">
+        <div class="w-full h-full flex flex-col gap-5 justify-end">
+            <h1 class="text-[30px] font-bold text-(--maroon-color)">Visit Us</h1>
+            <p class="text-[16px] text-(--gray-color)">9998 Hayes Isle, Mantefurt 03581</p>
+            <p class="text-[16px] text-(--gray-color)">505-418-0415</p>
+        </div>
+        <div class="w-full h-full flex gap-5 items-end justify-end">
+            <p class="text-[16px] text-(--gray-color)">Follow Us:</p>
+            <img src="assets/Facebook.svg" class="w-[25px]">
+            <img src="assets/Instagram.svg" class="w-[25px]">
+        </div>
+    </footer>
+      <script>
+        // --- Dynamic Tab Switching Logic ---
+        const tabs = document.querySelectorAll('.notification-tab');
+        const notificationList = document.getElementById('notification-list');
+
+        const notifications = {
+            unread: document.querySelectorAll('.notification-item.unread'),
+            archived: document.querySelectorAll('.notification-item.read'),
+        };
+
+        function switchTab(tabName) {
+            // Update Tab Styles
+            tabs.forEach(tab => {
+                if (tab.dataset.tab === tabName) {
+                    tab.classList.remove('text-gray-500', 'border-transparent', 'font-medium', 'hover:border-gray-300');
+                    tab.classList.add('text-(--maroon-color)', 'border-(--maroon-color)', 'font-bold');
+                } else {
+                    tab.classList.add('text-gray-500', 'border-transparent', 'font-medium', 'hover:border-gray-300');
+                    tab.classList.remove('text-(--maroon-color)', 'border-(--maroon-color)', 'font-bold');
+                }
+            });
+
+            // Show/Hide Notifications
+            let visibleCount = 0;
+            const allItems = document.querySelectorAll('.notification-item');
+            
+            allItems.forEach(item => {
+                if (item.classList.contains(tabName)) {
+                    item.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+
+            // Handle Empty State
+            if (visibleCount === 0) {
+                document.getElementById('empty-state').classList.remove('hidden');
+            } else {
+                document.getElementById('empty-state').classList.add('hidden');
+            }
+        }
+
+        // Add event listeners to tabs
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => switchTab(tab.dataset.tab));
+        });
+
+        // Function to simulate marking all unread notifications as read (for button)
+        function markAllAsRead() {
+            const unreadItems = document.querySelectorAll('.notification-item.unread');
+            
+            unreadItems.forEach(item => {
+                // Visually mark as read
+                item.classList.remove('unread', 'bg-white', 'hover:shadow-md');
+                item.classList.add('read', 'bg-[var(--notification-read)]', 'text-gray-500');
+                item.querySelector('.absolute').classList.add('hidden');
+            });
+            
+            // Re-render current tab to reflect changes (usually switching to 'archived')
+            switchTab('unread'); 
+
+            // Show a simple confirmation message temporarily
+            const header = document.querySelector('h1.text-(--maroon-color)').parentElement;
+            const confirmation = document.createElement('p');
+            confirmation.textContent = 'All unread notifications marked as read!';
+            confirmation.className = 'text-green-600 font-semibold mt-4 text-center transition duration-500 opacity-0';
+            header.after(confirmation);
+
+            setTimeout(() => {
+                confirmation.classList.add('opacity-100');
+            }, 50);
+            setTimeout(() => {
+                confirmation.classList.remove('opacity-100');
+                confirmation.classList.add('opacity-0');
+            }, 2000);
+            setTimeout(() => {
+                confirmation.remove();
+            }, 2500);
+
+            
+        }
+
+        // Set the default tab to 'Unread' on page load
+        window.onload = () => switchTab('unread');
+    </script>
+</body>
+</html>
