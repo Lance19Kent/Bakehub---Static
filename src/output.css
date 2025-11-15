@@ -886,6 +886,12 @@
   .px-\[70px\] {
     padding-inline: 70px;
   }
+  .px-\[100px\] {
+    padding-inline: 100px;
+  }
+  .px-\[130px\] {
+    padding-inline: 130px;
+  }
   .py-0 {
     padding-block: calc(var(--spacing) * 0);
   }
@@ -936,6 +942,9 @@
   }
   .pt-\[120px\] {
     padding-top: 120px;
+  }
+  .pt-\[140px\] {
+    padding-top: 140px;
   }
   .pr-2 {
     padding-right: calc(var(--spacing) * 2);
